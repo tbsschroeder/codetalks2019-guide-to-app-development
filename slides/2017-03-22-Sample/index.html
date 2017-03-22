@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>GitLab CI - FridayHack</title>
+
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../css/theme/hhu/hhu.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+		 var link = document.createElement( 'link' );
+		 link.rel = 'stylesheet';
+		 link.type = 'text/css';
+		 link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
+		 document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+    <style>
+     .jobs {
+       width: 20%;
+       opacity: .7;
+       float: left;
+     }
+     .jobs .content {
+       height: 100px;
+       line-height: 100px;
+       color: white
+     }
+     .bg-blue {
+       background-color: #176fc1;
+     }
+     .bg-red {
+       background-color: #be0a26;
+     }
+     .bg-green {
+       background-color: #97bf0d;
+     }
+     .bg-grey {
+       background-color: #d9dadb;
+     }
+    </style>
+	</head>
+	<body>
+		<div class="reveal">
+
+      <div id="logo"><object data="../../css/theme/hhu/img/unilogo.svg" type="image/svg+xml"></object></div>
+
+			<div class="slides">
+        <section data-state="footer">
+          <div id="title">
+            <h3><img alt="" src="../../img/logos/gitlab.svg" width="100px"/></h3>
+            <h3>GitLab CI</h3>
+            <hr/>
+            <h5>FridayHack</h5>
+            <h5>
+              <small>Christian Meter<br/>17.03.2017</small></h5>
+          </div>
+        </section>
+
+        <!--
+             hhublau: #176fc1
+             hhurot: #be0a26
+             hhugruen: #97bf0d
+             hhugrau: #d9dadb
+           -->
+
+        <!-- Content -->
+        <section>
+          <h3>Was ist Continuous Integration?</h3>
+          <br/>
+          <p>
+            Fortlaufendes Zusammenfügen der einzelnen Komponenten zu einer Anwendung
+          </p>
+        </section>
+
+        <section>
+          <p>
+            <strong>Ziel:</strong><br/>
+            Steigerung der Softwarequalität
+          </p>
+          <p>
+            <strong>Wie?</strong><br/>
+            Regelmäßig Anwendung bauen, automatisiert Tests und Messungen zur Softwaremetrik ausführen
+          </p>
+        </section>
+
+        <section>
+          <div class="bg-blue" style="width: 100%;">
+            <span style="height: 100px; line-height: 100px; color: white">Pipeline</span>
+          </div>
+          <br/>
+          <div class="fragment">
+            <div class="jobs bg-blue" style="margin-right: 7%">
+              <span class="content">Job</span>
+            </div>
+            <div class="jobs bg-blue" style="margin-right: 6%">
+              <span class="content">Job</span>
+            </div>
+            <div class="jobs bg-blue" style="margin-right: 7%">
+              <span class="content">Job</span>
+            </div>
+            <div class="jobs bg-blue">
+              <span class="content">Job</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="bg-blue" style="width: 100%;">
+            <span style="height: 100px; line-height: 100px; color: white">Pipeline</span>
+          </div>
+          <br/>
+          <div>
+            <div class="jobs bg-blue" style="margin-right: 7%">
+              <span class="content">Job</span>
+            </div>
+            <div class="jobs bg-green" style="margin-right: 6%">
+              <span class="content">Job</span>
+            </div>
+            <div class="jobs bg-green" style="margin-right: 7%">
+              <span class="content">Job</span>
+            </div>
+            <div class="jobs bg-red">
+              <span class="content">Job</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="bg-blue" style="width: 100%;">
+            <span style="height: 100px; line-height: 100px; color: white">Pipeline</span>
+          </div>
+          <br/>
+          <div>
+            <div class="jobs bg-blue" style="margin-right: 7%">
+              <span class="content">Build</span>
+            </div>
+            <div class="jobs bg-green" style="margin-right: 6%">
+              <span class="content">Metrics</span>
+            </div>
+            <div class="jobs bg-green" style="margin-right: 7%">
+              <span class="content">Test</span>
+            </div>
+            <div class="jobs bg-red">
+              <span class="content">Deploy</span>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <img alt="" src="img/pipeline.png"/>
+        </section>
+
+        <section>
+          <h3>
+            <img class="inline" src="img/gem.svg" style="max-width: 1em;"/>
+            Artifacts
+          </h3>
+          <p>
+            "Ergebnisse" der CI können als Artifact exportiert werden
+          </p>
+          <pre><code>
+image: $CI_REGISTRY/cn-tsn/latex
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+pdf:
+  script:
+    - rake
+  artifacts:
+    paths:
+      - master.pdf
+    expire_in: 1 day
+          </code></pre>
+        </section>
+
+        <section>
+          <h3><img class="inline" src="../../img/logos/docker.svg" style="max-width: 1.8em;"/> Container Registry</h3>
+          <p>
+            Speichert Docker Images
+          </p>
+          <p>
+            Fertig gebaute Projekte können so bequem als Image verteilt werden (z.B. zum Production-Server)
+          </p>
+          <pre><code>
+build_image:
+  image: docker:dind
+  script:
+    - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
+    - docker build -t $CI_REGISTRY_IMAGE .
+    - docker push $CI_REGISTRY_IMAGE
+  only:
+    - master
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Technisches</h3>
+          <p>
+            Alle Jobs werden in <strong>Runnern</strong> ausgeführt<br/>
+            (wir haben einen Runner für alle)
+          </p>
+          <p>
+            Unser Runner ist gleichzeitig auch die Container Registry<br/>
+            (ja, das ist noch unschön)
+          </p>
+          <p>
+            10 Kerne, 8 GB RAM, 200 GB HDD, 5 gleichzeitige Builds
+          </p>
+          <p>
+            Unterstützt Docker-in-Docker (#dockerception)
+          </p>
+          </ul>
+        </section>
+
+        <section>
+          <a href="https://gitlab.cs.uni-duesseldorf.de/meter/kassenclo/">Demo</a>
+        </section>
+
+        <section>
+          <h3>Nachlese</h3>
+          <br/>
+          <p>
+            <a href="https://de.wikipedia.org/wiki/Kontinuierliche_Integration">
+              <img class="inline" src="../../img/logos/wikipedia.svg" style="max-width: 1em;"/>
+              Kontinuierliche Integration
+            </a>
+          </p>
+          <p>
+            <a href="https://gitlab.cs.uni-duesseldorf.de/cn-tsn/gitlab-ci-yml">Unsere .gitlab-ci.yml Templates</a>
+          </p>
+          <p>
+            <a href="https://gitlab.cs.uni-duesseldorf.de/ci/lint">gitlab-ci.yml Linter</a>
+          </p>
+        </section>
+		  </div>
+
+		  <script src="../../reveal.js/lib/js/head.min.js"></script>
+		  <script src="../../reveal.js/js/reveal.js"></script>
+
+		  <script>
+		   // More info https://github.com/hakimel/reveal.js#configuration
+		   Reveal.initialize({
+         controls: false,
+			   history: true,
+         center: true,
+         //       slideNumber: true,
+         transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+			   // More info https://github.com/hakimel/reveal.js#dependencies
+			   dependencies: [
+				   /* { src: 'plugin/markdown/marked.js' },
+				      { src: 'plugin/markdown/markdown.js' },*/
+           //				 { src: '../../plugin/notes/notes.js', async: true },
+           				 { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			   ]
+		   });
+		  </script>
+	</body>
+</html>

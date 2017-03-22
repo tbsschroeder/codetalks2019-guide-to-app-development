@@ -1,0 +1,6 @@
+*.bak
+.#*
+*.lock
+node_modules/
+.sass-cache/
+.directory
