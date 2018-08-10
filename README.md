@@ -2,8 +2,7 @@
 
 Use `--recursive` option to clone this repository.
 
-This repository uses [reveal.js](https://github.com/hakimel/reveal.js/) for presentations. You need to install their
-dependencies.
+This repository uses [reveal.js](https://github.com/hakimel/reveal.js/) for presentations. You need to install their dependencies.
 
 ## Setup
 
