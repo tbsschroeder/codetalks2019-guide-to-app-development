@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Git Hooks</title>
+
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/league.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+		 var link = document.createElement( 'link' );
+		 link.rel = 'stylesheet';
+		 link.type = 'text/css';
+		 link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
+		 document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+
+			<div class="slides">
+        <section data-state="footer">
+          <div id="title">
+            <h3>How to get hooked up</h3>
+            <hr/>
+            <small>Based on <href src="https://www.atlassian.com/git/tutorials/git-hooks">Atlassians GIT Hook Guide</href></small>
+          </div>
+        </section>
+        
+        <!-- Content -->
+        <section>
+          <h3>Basics</h3>
+          <ul>
+            <li>Scripts that run automatically based on events</li>
+            <li>Based on local or server side</li>
+          </ul>
+          <img src="01.png" style="height:300px">
+        </section>
+
+        <section>
+          <h3>Installing hooks</h3>
+          <ul>
+            <li>Inside of every repo</li>
+            <li>Remove <strong>.sample</strong> to make them work</li>
+          </ul>
+          <pre><code>
+.git/hooks/
+applypatch-msg.sample
+pre-push.sample
+commit-msg.sample
+pre-rebase.sample
+post-update.sample
+prepare-commit-msg.sample
+pre-applypatch.sample
+update.sample
+pre-commit.sample
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Example</h3>
+          <ul>
+            <li>Modify <strong>prepare-commit-msg</strong> / start from scratch</li>
+            <li>Scripts have to be executable</li>
+            <li>Every script language can be used</li>
+            <li>Code will change the message on <strong>git commit</strong></li>
+          </ul>
+          <pre><code>
+#!/bin/sh
+echo "# Please include a useful commit message!" > $1
+          </code></pre>
+          <pre><code>
+#!/usr/bin/env python
+import sys, os
+commit_msg_filepath = sys.argv[1]
+with open(commit_msg_filepath, 'w') as f:
+f.write("# Please include a useful commit message!")
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Scope of Hooks</h3>
+          <ul>
+            <li>Local for every repo</li>
+            <li>Not copied by <strong>git clone</strong></li>
+            <li>Alternative: Use Git's template directory (used with every <strong>init</strong> or <strong>clone</strong>)</li>
+            <li>These templates can versioned and shared easily</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Server-side Hooks</h3>
+          <ul>
+            <li>Works like the local ones</li>
+            <li><i>pre-receive</i>: executed, if somebody uses <strong>git push</strong></li>
+            <li><i>update</i>: called separately for each pushed ref</li>
+            <li><i>post-receive</i>: after a successful push operation</li>
+          </ul>
+        </section>
+
+<!--
+        <section>
+          <h3>Code Review in Gitlab vs Gerrit</h3>
+          <ul>
+            <li>Gerrit:
+              <ul>
+                <li>Project cloned with commit-msg hook</lI>
+                <li>Only push to review-master</li>
+              </ul>
+            </li>
+            <li>Gitlab:
+              <ul>
+                <li>Protect master</li>
+                <li>Only allow merge request approvals</li>
+                <li>Pre-push hook & magic</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+-->
+
+
+        <section>
+          <h3>Example: Unit Tests</h3>
+          Create a <strong>pre-push</strong> script and make it executable:
+          <pre><code>
+#!/bin/sh
+
+echo "Running unit tests..."
+lein midje
+status=$?
+
+if [ "$status" = 0 ] ; then
+    echo "Damn..you're good!."
+    exit 0
+else
+    echo 1>&2 "OMFG, what have you done?"
+    exit 1
+fi
+            </code></pre>
+        </section>
+
+
+        <section>
+          <h3>Using GIT as proposal for Guitar Hero</h3>
+          <img src="02.png">
+        </section>
+		  </div>
+
+		  <script src="../../reveal.js/lib/js/head.min.js"></script>
+		  <script src="../../reveal.js/js/reveal.js"></script>
+
+		  <script>
+		   // More info https://github.com/hakimel/reveal.js#configuration
+		   Reveal.initialize({
+         controls: false,
+			   history: true,
+         center: true,
+         //       slideNumber: true,
+         transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+			   // More info https://github.com/hakimel/reveal.js#dependencies
+			   dependencies: [
+				   /* { src: 'plugin/markdown/marked.js' },
+				      { src: 'plugin/markdown/markdown.js' },*/
+           //				 { src: '../../plugin/notes/notes.js', async: true },
+           { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			   ]
+		   });
+		  </script>
+	</body>
+</html>
