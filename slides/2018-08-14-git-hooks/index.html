@@ -7,7 +7,7 @@
 		<title>Git Hooks</title>
 
 		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-		<link rel="stylesheet" href="../../reveal.js/css/theme/league.css">
+		<link rel="stylesheet" href="../../reveal.js/css/theme/sky.css">
 
 		<!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
@@ -39,8 +39,9 @@
           <ul>
             <li>Scripts that run automatically based on events</li>
             <li>Based on local or server side</li>
+            <li>All of you already used hooks<br><small>(Gerrit added a unique change-id to track commits acrosses mutliple actions)</small></li>
           </ul>
-          <img src="01.png" style="height:300px">
+          <!--<img src="01.png" style="height:300px">-->
         </section>
 
         <section>
@@ -66,7 +67,7 @@ pre-commit.sample
         <section>
           <h3>Example</h3>
           <ul>
-            <li>Modify <strong>prepare-commit-msg</strong> / start from scratch</li>
+            <li>Modify any hook or start from scratch</li>
             <li>Scripts have to be executable</li>
             <li>Every script language can be used</li>
             <li>Code will change the message on <strong>git commit</strong></li>
@@ -125,13 +126,31 @@ f.write("# Please include a useful commit message!")
         </section>
 -->
 
+        <section>
+          <h3>Example: Linting</h3>
+          Create a <strong>pre-commit</strong> script and make it executable:
+          <pre><code>
+#!/bin/bash
+echo "Running some linter..."
+lein cljfmt check
+status=$?
+
+if [ "$status" = 0 ] ; then
+    echo "Some pretty code you got there!"
+    exit 0
+else
+    read -n 1 -p "Oh..this looks bad. Can I fix it? (y/n)? " ret
+    if [ "$ret" = "y" ]; then lein cljfmt fix; exit 0; fi
+    exit 1
+fi
+            </code></pre>
+        </section>
 
         <section>
           <h3>Example: Unit Tests</h3>
           Create a <strong>pre-push</strong> script and make it executable:
           <pre><code>
-#!/bin/sh
-
+#!/bin/bash
 echo "Running unit tests..."
 lein midje
 status=$?
@@ -143,9 +162,9 @@ else
     echo 1>&2 "OMFG, what have you done?"
     exit 1
 fi
+
             </code></pre>
         </section>
-
 
         <section>
           <h3>Using GIT as proposal for Guitar Hero</h3>
