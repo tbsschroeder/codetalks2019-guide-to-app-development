@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>GraalVM</title>
+
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<!--<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">-->
+		<!--<link rel="stylesheet" href="../../css/theme/metropolis.css">-->
+		<link rel="stylesheet" href="../../css/theme/metronom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+		 	var link = document.createElement( 'link' );
+		 	link.rel = 'stylesheet';
+		 	link.type = 'text/css';
+		 	link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
+		 	document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body class="dark">
+		<div class="reveal">
+			<img id="logo-white" src="../../img/logo-white.png" style="margin: 1em; width: 15%; position: absolute; bottom: 0;">
+
+			<div class="slides">
+        <section data-state="footer">
+          <div id="title">
+						<h1>Whales are too thick!</h1>
+						<h1 class="subtitle">A short glimpse on GraalVM</h1>
+            <div><small>METRONOM Düsseldorf, XXth YY 2018</small></div>
+						<div><small>Created by Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small></div>
+					</div>
+        </section>
+        
+				<!-- Content -->
+				
+				<section>
+					<h3>What is GraalVM</h3>
+					<ul>
+						<li>Comprehensive ecosystem</li>
+						<li>Supporting a large set of JVM/LLVM-based languages</li>
+						<li>High perfomance</li>
+						<li>Low-footprint</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Motivation</h3>
+					<ul>
+						<li>Docker encaspulates and isolates dependencies</li>
+						<li>GraalVM removes the isolation between programming languages and enables interoperability in a shared runtime</li>
+					</ul>
+				</section>
+
+        <section>
+          <h3>...</h3>
+          <ul>
+						<li>... <span class="fragment highlight-metronom-logo-yellow">...</span></li>
+          </ul>
+				</section>
+
+        <section>
+					<h3>...</h3>
+					<ul>
+						<li>... <span class="metronom-logo-yellow">...</span></li>
+						<li>...</li>
+					</ul>
+
+				<section>
+					<h1>Any questions?</h1>
+					<br>
+					<ul>
+						<li>http://www.graalvm.org/</li>
+					</ul>
+					<br>
+					<br>
+					<small>Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small>
+				</section>
+
+		  </div>
+
+		  <script src="../../reveal.js/lib/js/head.min.js"></script>
+		  <script src="../../reveal.js/js/reveal.js"></script>
+
+		  <script>
+		   // More info https://github.com/hakimel/reveal.js#configuration
+		   Reveal.initialize({
+         controls: false,
+			   history: true,
+         center: true,
+         //       slideNumber: true,
+         transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+			   // More info https://github.com/hakimel/reveal.js#dependencies
+			   dependencies: [
+				   /* { src: 'plugin/markdown/marked.js' },
+				      { src: 'plugin/markdown/markdown.js' },*/
+           //				 { src: '../../plugin/notes/notes.js', async: true },
+           { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			   ]
+		   });
+		  </script>
+	</body>
+</html>

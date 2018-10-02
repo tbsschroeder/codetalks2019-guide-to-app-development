@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Docker</title>
+
+		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+		<!--<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">-->
+		<!--<link rel="stylesheet" href="../../css/theme/metropolis.css">-->
+		<link rel="stylesheet" href="../../css/theme/metronom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+		 	var link = document.createElement( 'link' );
+		 	link.rel = 'stylesheet';
+		 	link.type = 'text/css';
+		 	link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
+		 	document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body class="dark">
+		<div class="reveal">
+			<img id="logo-white" src="../../img/logo-white.png" style="margin: 1em; width: 10%; position: absolute; bottom: 0;">
+
+			<div class="slides">
+        <section data-state="footer">
+          <div id="title">
+						<h1>A Small Journey to the Whales</h1>
+						<h1 class="subtitle">Short Introduction into Docker</h1>
+						<img id="docker" src="docker.png" style="margin: 0; background: 0; border: 0; box-shadow: 0 0 0; float: right; height: 20%;">
+            <div><small>METRONOM Düsseldorf, 17th October 2018</small></div>
+						<div><small>Created by Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small></div>
+					</div>
+        </section>
+        
+        <!-- Content -->
+        <section>
+					<h3>What is Docker?</h3>
+					Docker is just ...
+          <ul>
+						<li>another layer of abstraction</li>
+						<li>another tool for automation of OS-level virtualization</li>
+						<li>a hype ... it will pass over</li>
+						<li>some virtual machine</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>But it ...</h3>
+          <ul>
+						<li>is small, lightweight and fast</li>
+						<li>summarizes software into images</li>
+						<li>encaspulates and isolates dependencies</li>
+						<li>is easy to scale, reuse and distribute</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Docker in a Nutshell</h3>
+          <ul>
+						<li>Instruction read from a <span class="metronom-logo-yellow">Dockerfile</span></li>
+						<li>Dockerfiles are plain text with commands</li>
+						<li>Docker can assemble <span class="metronom-logo-yellow">containers</span> bases on these files</li>
+						<li>Runtime images of a container are called <span class="metronom-logo-yellow">images</span></li>
+          </ul>
+				</section>
+
+        <section>
+          <h3>Examples</h3>
+          <pre><code class="sh" data-trim>
+			$ docker run hello-world
+			Unable to find image 'hello-world:latest' locally
+			latest: Pulling from library/hello-world
+			d1725b59e92d: Pull complete 
+			Digest: sha256:0add3ace90ecb4adbf7777e9aacf18357296e799f81cabc9fde470971e499788
+			Status: Downloaded newer image for hello-world:latest
+					
+			Hello from Docker!
+			This message shows that your installation appears to be working correctly.
+					
+			...
+          </code></pre>
+        </section>
+
+        <section>
+					<h3>Examples</h3>
+					<ul>
+						<li>Show all images with <span class="metronom-logo-yellow">docker images</span></li>
+						<li>List of containers <span class="metronom-logo-yellow">docker ps -a</span></li>
+						<li>Reuse with <span class="metronom-logo-yellow">docker start –attach <container name></span></li>
+						<li>Stop with <span class="metronom-logo-yellow">docker stop <container name></span></li>
+						<li>Remove with <span class="metronom-logo-yellow">docker rm <container name></span></li>
+						<li>...</li>
+					</ul>
+				</section>
+
+        <section>
+					<h3>Examples</h3>
+					<ul>
+						<li>Alpine linux: <span class="metronom-logo-yellow">docker run -it alpine sh</span></li>
+						<li>Nginx: <span class="metronom-logo-yellow">docker run --name docker-nginx -p 80:80 nginx -d</span></li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>More</h3>
+					<ul>
+						<li>Multi container apps via <span class="metronom-logo-yellow">docker-compose</span></li>
+						<li>Keeping your image clean via <span class="metronom-logo-yellow">multi-layer images</span></li>
+						<li>Next lightning talk will be about: <span class="metronom-green">GraalVM</span></li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Any questions?</h1>
+					<br>
+					<ul>
+						<li>https://hub.docker.com/</li>
+						<li>https://docs.docker.com/</li>
+					</ul>
+					<br>
+					<br>
+					<small>Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small>
+				</section>
+
+		  </div>
+
+		  <script src="../../reveal.js/lib/js/head.min.js"></script>
+		  <script src="../../reveal.js/js/reveal.js"></script>
+
+		  <script>
+		    // More info https://github.com/hakimel/reveal.js#configuration
+		    Reveal.initialize({
+         	controls: false,
+			   history: true,
+			   center: true,
+			   //slideNumber: true,
+			   transition: 'fade', // none/fade/slide/convex/concave/zoom
+			   // More info https://github.com/hakimel/reveal.js#dependencies
+			   dependencies: [
+				   /* { src: 'plugin/markdown/marked.js' },
+				      { src: 'plugin/markdown/markdown.js' },*/
+           //				 { src: '../../plugin/notes/notes.js', async: true },
+           { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			   ]
+		   });
+		  </script>
+	</body>
+</html>
