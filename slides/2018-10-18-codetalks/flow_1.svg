@@ -4,7 +4,7 @@
   <g id="Hintergrund">
     <g>
       <rect style="fill: #ffffff; fill-opacity: 0; stroke-opacity: 1; stroke-width: 4; stroke: #f9ea29" x="260" y="140" width="400" height="100" rx="10" ry="10"/>
-      <text font-size="28.2222" style="fill: #ffffff; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Lato;font-style:normal;font-weight:normal" x="460" y="200.261">
+      <text font-size="28.2222" style="fill: #f9ea29; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Lato;font-style:normal;font-weight:normal" x="460" y="200.261">
         <tspan x="460" y="200.261">present a single argument</tspan>
       </text>
     </g>
