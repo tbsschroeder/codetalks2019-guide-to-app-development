@@ -26,12 +26,40 @@
 
 		<div class="slides">
 
-			<section data-state="footer">
-				<div id="title">
+			<!--
+			<section>
+				<div>
 					<h2>Dive Deep into Argumentation Theory</h2>
 					<h1 class="subtitle">Track: Artificial Intelligence</h1>
 					<div><small>code.talks Hamburg, 18th Oct 2018</small></div>
 					<div><small>Created by Dr. Tobias Krauthoff (<a href="mailto:tobias.krauthoff@metronom.com">tobias.krauthoff@metronom.com</a>)</small></div>
+				</div>
+			</section>
+			-->
+
+			<section class="center" data-background-image="./img/codetalks-bg.png">
+				<span>Dr. Tobias Krauthoff</span>
+				<br><br>
+				<h2 style="margin: 0;">Dive Deep into Argumentation Theory</h2>
+				<br>
+				<span>Artificial Intelligence</span>
+			</section>
+
+			<section>
+				<h3>Who am I?</h3>
+				<div class="center">
+					<a href="https://www.fortschrittskolleg.de/en/">
+						<img class="white-box" style="height: 4.0em;" src="img/logo-fkop.png">
+					</a>
+					<a href="https://diid.hhu.de/en/">
+						<img class="white-box" style="height: 4.0em;" src="img/logo-diid-short.png">
+					</a>
+					<a href="https://www.tsn.hhu.de/ourgroup/alumni/tobias-krauthoff.html">
+						<img class="white-box" style="height: 4.0em;" src="img/phd-tux.png">
+					</a>
+					<a href="https://www.metronom.com/">
+						<img class="white-box" style="height: 4.0em;" src="img/logo-metronom.jpg">
+					</a>
 				</div>
 			</section>
 
@@ -50,42 +78,12 @@
 				</ul>
 			</section>
 
-			<section>
-				<h3>Who am I?</h3>
-				<!--
-				<ul>
-					<li>Full-Stack Magican at METRO<strong class="metronom-logo-yellow">|</strong>NOM</li>
-					<li>Former (board)-member of the:
-						<ul>
-							<li>Graduation School on <span class="metronom-logo-yellow">Online Participation</span></li>
-							<li>Düsseldorf Institut for <span class="metronom-logo-yellow">Internet and Democracy</span></li>
-						</ul>
-					</li>
-					<li>PhD in computer science (dialog-based online argumentation)</li>
-				</ul>
-				-->
-				<div class="center">
-					<a href="https://www.fortschrittskolleg.de/en/">
-						<img class="white-box" style="height: 4.0em;" src="img/logo-fkop.png">
-					</a>
-					<a href="https://diid.hhu.de/en/">
-						<img class="white-box" style="height: 4.0em;" src="img/logo-diid-short.png">
-					</a>
-					<a href="https://www.tsn.hhu.de/ourgroup/alumni/tobias-krauthoff.html">
-						<img class="white-box" style="height: 4.0em;" src="img/phd-tux.png">
-					</a>
-					<a href="https://www.metronom.com/">
-						<img class="white-box" style="height: 4.0em;" src="img/logo-metronom.jpg">
-					</a>
-				</div>
-			</section>
-
 			<section data-background-color="#5EC299">
 				<h2>Let's Dive</h2>
 			</section>
 
 			<section>
-				<h3>Let's start small</h3>
+				<h3>Motivation</h3>
 				<ul>
 					<li>Online participation processes do not always work</li>
 					<li>Interaction of the participants is a key element</li>
@@ -143,27 +141,27 @@
 				<div class="fragment fade-in">
 					<h3>Online</h3>
 					<div class="center">
+							<img class="svg-box" src="img/phone.svg">
 						<img class="svg-box" src="img/group.svg">
-						<img class="svg-box" src="img/phone.svg">
 						<img class="svg-box" src="img/cloud.svg">
 					</div>
 				</div>
 				<aside class="notes">
 					Offline:<br>
+					- bound to place and time<br>
 					- face-to-face, small groups<br>
 					- gestures, mimics, tone<br>
-					- bound to place and time<br>
 					<br>
 					Online:<br>
-					- Independent of time and placement<br>
-					- Large number of participants<br>
+					- independent of time and placement<br>
+					- large number of participants<br>
 					- multiple solutions for discussions
 				</aside>
 			</section>
 
 			<section>
-				<h3>Advantages vs Disadvantages</h3>
-				<table class="center" id="custom-list-type-table">
+				<h3>Advantages & Disadvantages</h3>
+				<table class="center seamless-table" id="custom-list-type-table">
 					<tr>
 						<td>
 							<ul class="fragment fade-in">
@@ -268,8 +266,7 @@
 				<h3>Idea</h3>
 				<ul>
 					<li>Simulate a real world <span class="metronom-logo-yellow">discussion online</span></li>
-					<li>Build a <span class="metronom-logo-yellow">system</span> which is a representative off users that already
-						participated</li>
+					<li><span class="metronom-logo-yellow">System</span> is a representative of users that already participated</li>
 					<li><span class="metronom-logo-yellow">Input</span> of other users are the base of new discussion</li>
 					<li><span class="metronom-logo-yellow">Conducting</span> a dialog with a current user</li>
 				</ul>
@@ -285,7 +282,7 @@
 					<li>Defeasible reasons</li>
 				</ul>
 				<br><br>
-				<span class="fragment fade-in metronom-red">Is it usable for unskilled participants?</span>
+				<h3><span class="fragment fade-in metronom-red">Is it usable for unskilled participants?</span></h3>
 				<aside class="notes">
 					Deductive argumentation: incomplete arguments & inference rules
 					<br><br>
@@ -391,22 +388,17 @@
 					<span class="metronom-red">Not usable for unskilled participants!</span>
 				</h3>
 			</section>
-
+			
 			<section>
-				<h3>The Easy approach</h3>
-				<ul>
-					<li>Practical approach</li>
-					<li>Set of statements $\rightarrow$ arguments</li>
-					<li>Three attacks and one support</li>
-				</ul>
-			</section>
-
-			<section>
-				<h3>Example</h3>
+				<h3>The Easy Approach</h3>
 				<div style="height: 450px">
 					<img style="position: absolute" src="img/argument.svg">
 				</div>
 				<aside class="notes">
+					Practical approach<br>
+					Set of statements -> arguments<br>
+					Three attacks and one support
+					<br><br>
 					Premise, PremiseGroup, Conclusion, Arguments, Support, Attack, Undermine, Undercut, Rebut
 					<br><br>
 					Translatable to the most common AFs
@@ -426,29 +418,27 @@
 			<section>
 				<h1 class="metronom-logo-yellow">Any questions?</h1>
 				<br>
-				<div class="center" style="font-size: 0.95em;">
-					<p>
-						<i class="fab fa-github" style="color: #6694CF;"></i>
-						<a href="https://github.com/hhucn">https://github.com/hhucn</a>
-					</p>
-					<br>
-					<p>
-						<i class="far fa-envelope" style="color: #6694CF;"></i>
-						<a href="mailto:tobias.krauthoff@metronom.com">tobias.krauthoff@metronom.com</a>
-					</p>
-					<br>
-					<p>
-						<i class="fa fa-tv" style="color: #6694CF;"></i>
-						<a href="https://tkrauthoff.github.io/dive-deep-into-argumentation-theory">https://tkrauthoff.github.io/dive-deep-into-argumentation-theory</a>
-					</p>
-				</div>
+				<table class="center" border="0">
+					<tr>
+						<td class="center"><i class="fab fa-twitter metronom-blue"></i></td>
+						<td><a href="https://twitter.com/joinmetronomnow">@joinmetronomnow</a></td>
+					</tr>
+					<tr>
+						<td class="center"><i class="far fa-envelope metronom-blue"></i></td>
+						<td><a href="mailto:tobias.krauthoff@metronom.com">tobias.krauthoff@metronom.com</a></td>
+					</tr>
+					<tr>
+						<td class="center"><i class="fa fa-tv metronom-blue" style="font-size: 0.8em;"></i></td>
+						<td><a href="http://tiny.cc/ddat">http://tiny.cc/ddat</a></td>
+					</tr>
+					</tr>
+				</table>
 			</section>
 
 		</div>
 	</div>
 
-	<!-- Printing and PDF exports -->
-	<script src="print.js"></script>
+	<script src="./js/print.js"></script>
 	<script src="./js/jquery-3.3.1.slim.min.js"></script>
 	<script src="./js/head.min.js"></script>
 	<script src="./js/reveal.js"></script>

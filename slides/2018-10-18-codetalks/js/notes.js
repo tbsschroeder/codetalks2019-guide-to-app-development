@@ -18,6 +18,8 @@ var RevealNotes = (function() {
 			jsFileLocation = jsFileLocation.replace(/notes\.js(\?.*)?$/, '');   // the js folder path
 			notesFilePath = jsFileLocation + 'notes.html';
 		}
+		console.log(jsFileLocation);
+		console.log(notesFilePath);
 
 		var notesPopup = window.open( notesFilePath, 'reveal.js - Notes', 'width=1100,height=700' );
 
