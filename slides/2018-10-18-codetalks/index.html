@@ -7,25 +7,21 @@
 
 	<title>Dive Deep into Argumentation Theory</title>
 
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-	<!--<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">-->
-	<!--<link rel="stylesheet" href="../../css/theme/metropolis.css">-->
-	<link rel="stylesheet" href="../../css/theme/metronom.css">
-	<link rel="stylesheet" href="clock.css">
-	<link rel="stylesheet" href="pin.css">
+	<link rel="stylesheet" href="./css/fontawesome-5.4.1.all.css">
+	<link rel="stylesheet" href="./css/reveal.css">
+	<link rel="stylesheet" href="./css/metronom.css">
+	<link rel="stylesheet" href="./css/clock.css">
+	<link rel="stylesheet" href="./css/pin.css">
 
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png" />
 	<link rel="icon" href="img/favicon.png" type="image/png" />
-	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
 </head>
 
 <body class="dark">
 	<div class="reveal">
 		<div id="footer">
-			<img id="footer-left" src="../../img/metronom-white.png">
-			<img id="footer-right" src="../../img/codetalks-white.png">
+			<img id="footer-left" src="./img/metronom-white.png">
+			<img id="footer-right" src="./img/codetalks-white.png">
 		</div>
 
 		<div class="slides">
@@ -430,31 +426,22 @@
 			<section>
 				<h1 class="metronom-logo-yellow">Any questions?</h1>
 				<br>
-				<!--
-				<p class="center">
-					D-BAS (<a href="https://dbas.cs.hhu.de/">https://dbas.cs.hhu.de</a>) &
-					discuss (<a href="https://discuss.cs.hhu.de/">https://discuss.cs.hhu.de</a>)
-				</p>
-				<p class="center">
-					<img src="img/logo-github.png" style="filter: invert(100%); height: 1em;">
-					<a href="https://github.com/hhucn/discuss">https://github.com/hhucn/discuss</a>
-					<img src="img/logo-github.png" style="filter: invert(100%); height: 1em;">
-				</p>
-			-->
-				<p class="center">
-					<i class="fab fa-github" style="color: #6694CF;"></i>
-					<a href="https://github.com/hhucn">https://github.com/hhucn</a>
-				</p>
-				<br>
-				<p class="center">
-					<i class="far fa-envelope" style="color: #6694CF;"></i>
-					<a href="mailto:tobias.krauthoff@metronom.com">tobias.krauthoff@metronom.com</a>
-				</p>
-				<br>
-				<p class="center">
-					<i class="fa fa-tv" style="color: #6694CF;"></i>
-					<a href="https://tokra100.github.io/dive-deep-into-argumentation-theory">https://tokra100.github.io/dive-deep-into-argumentation-theory</a>
-				</p>
+				<div class="center" style="font-size: 0.95em;">
+					<p>
+						<i class="fab fa-github" style="color: #6694CF;"></i>
+						<a href="https://github.com/hhucn">https://github.com/hhucn</a>
+					</p>
+					<br>
+					<p>
+						<i class="far fa-envelope" style="color: #6694CF;"></i>
+						<a href="mailto:tobias.krauthoff@metronom.com">tobias.krauthoff@metronom.com</a>
+					</p>
+					<br>
+					<p>
+						<i class="fa fa-tv" style="color: #6694CF;"></i>
+						<a href="https://tkrauthoff.github.io/dive-deep-into-argumentation-theory">https://tkrauthoff.github.io/dive-deep-into-argumentation-theory</a>
+					</p>
+				</div>
 			</section>
 
 		</div>
@@ -462,9 +449,9 @@
 
 	<!-- Printing and PDF exports -->
 	<script src="print.js"></script>
-	<script src="jquery-3.3.1.slim.min.js"></script>
-	<script src="../../reveal.js/lib/js/head.min.js"></script>
-	<script src="../../reveal.js/js/reveal.js"></script>
+	<script src="./js/jquery-3.3.1.slim.min.js"></script>
+	<script src="./js/head.min.js"></script>
+	<script src="./js/reveal.js"></script>
 
 	<script>
 		// More info https://github.com/hakimel/reveal.js#configuration
@@ -478,25 +465,15 @@
 
 			// More info https://github.com/hakimel/reveal.js#dependencies
 			dependencies: [
-				//{ src: '../../reveal.js/plugin/markdown/marked.js' },
-				//{ src: '../../reveal.js/plugin/markdown/markdown.js' },
 				{
-					src: '../../reveal.js/plugin/notes/notes.js',
+					src: './js/notes.js',
 					async: true
 				}, {
-					src: '../../reveal.js/plugin/math/math.js',
+					src: './js/math.js',
 					async: true
 				},
-				//{ src: '../../reveal.js/plugin/zoom-js/zoom.js', async: true },
-
-				//https://github.com/calevans/external
-				//{	src: '../../reveal.js/plugin/external/external.js',
-				//	condition: function() {
-				//		return !!document.querySelector( '[data-external]' );
-				//	}
-				//},
 				{
-					src: '../../reveal.js/plugin/highlight/highlight.js',
+					src: './js/highlight.js',
 					async: true,
 					callback: function () {
 						hljs.initHighlightingOnLoad();
