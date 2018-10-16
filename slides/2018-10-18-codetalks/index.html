@@ -32,7 +32,7 @@
 					<h2>Dive Deep into Argumentation Theory</h2>
 					<h1 class="subtitle">Track: Artificial Intelligence</h1>
 					<div><small>code.talks Hamburg, 18th Oct 2018</small></div>
-					<div><small>Created by Dr. Tobias Krauthoff (<a href="mailto:tobias.krauthoff@metronom.com">tobias.krauthoff@metronom.com</a>)</small></div>
+					<div><small>Created by Dr. Tobias Krauthoff</small></div>
 				</div>
 			</section>
 			-->
@@ -43,8 +43,17 @@
 				<h2 style="margin: 0;">Dive Deep into Argumentation Theory</h2>
 				<br>
 				<span>Artificial Intelligence</span>
+				<aside class="notes">
+					Who am I: FKOP -> DIID -> PhD -> METROnom
+					<br><br>
+					Online discussions in a larger scale<br>
+					- structure<br>
+					- unskilled participants<br>
+					- scaling
+				</aside>
 			</section>
 
+			<!--
 			<section>
 				<h3>Who am I?</h3>
 				<div class="center">
@@ -81,6 +90,7 @@
 			<section data-background-color="#5EC299">
 				<h2>Let's Dive</h2>
 			</section>
+			-->
 
 			<section>
 				<h3>Motivation</h3>
@@ -89,7 +99,7 @@
 					<li>Interaction of the participants is a key element</li>
 					<li>Participants are not practiced in (online) reasoning</li>
 					<li>Large number of discussion participants</li>
-					<li class="fragment metronom-logo-yellow">And what's about argumentation theory?</li>
+					<li class="fragment metronom-logo-yellow">Use of argumentation theory for online participation processes</li>
 				</ul>
 			</section>
 
@@ -110,7 +120,7 @@
 					<br><br>
 					Origins in epistemology: the theory of knowledge
 					<br><br>
-					Many kinds of argumentation: conversational, mathematical, scientific, interpretive, legal, poltical, ...
+					Many kinds of argumentation: conversational, mathematical, scientific, interpretive, legal, political, ...
 				</aside>
 			</section>
 
@@ -195,7 +205,7 @@
 			<section>
 				<h3>AI meets AT</h3>
 				<ul>
-					<li>Many communites</li>
+					<li>Many communities</li>
 					<li>Different software approaches</li>
 					<li>IBM: Watson and Debater</li>
 				</ul>
@@ -232,7 +242,7 @@
 				<br>
 				<small class="center">Software: <a href="https://www.phpbb.com/">phpBB 3.2</a></small>
 				<aside class="notes">
-					Pro: well-known, low inital hurdle
+					Pro: well-known, low initial hurdle
 					<br><br>
 					Con: structure, scalibility, redundancy, polarization
 				</aside>
@@ -292,13 +302,19 @@
 				</aside>
 			</section>
 
+			<section data-background-color="#5EC299">
+				<h2>Let's take it easy</h2>
+			</section>
+
 			<section>
 				<h3>Let's take it easy</h3>
 				<div style="height: 300px">
+					<!--
 					<img data-fragment-index="1" class="fragment fade-out" style="position: absolute" src="img/flow.svg">
-					<img data-fragment-index="1" class="fragment fade-in-then-out" style="position: absolute" src="img/flow_1.svg">
-					<img data-fragment-index="2" class="fragment fade-in-then-out" style="position: absolute" src="img/flow_2.svg">
-					<img data-fragment-index="3" class="fragment fade-in" style="position: absolute" src="img/flow_3.svg">
+					-->
+					<img data-fragment-index="1" class="fragment fade-out" style="position: absolute" src="img/flow_1.svg">
+					<img data-fragment-index="1" class="fragment fade-in-then-out" style="position: absolute" src="img/flow_2.svg">
+					<img data-fragment-index="2" class="fragment fade-in" style="position: absolute" src="img/flow_3.svg">
 				</div>
 			</section>
 
@@ -310,7 +326,7 @@
 				</div>
 				<br>
 				<small class="center">
-					D-BAS: <a href="https://dbas.cs.hhu.de">https://dbas.cs.hhu.de</a>
+					<a href="https://dbas.cs.hhu.de">https://dbas.cs.hhu.de</a> & <a href="https://github.com/hhucn">https://github.com/hhucn</a>
 				</small>
 			</section>
 
@@ -339,7 +355,7 @@
 					<li>...</li>
 				</ul>
 				<aside class="notes">
-					Toulmin (Philosoph): Schema from 1958
+					Toulmin (Philosopher): Schema from 1958
 					<br><br>
 					Dung: Correctness of arguments / only attacks / special form of logic programming with negation as failure
 					<br><br>
@@ -349,46 +365,57 @@
 				</aside>
 			</section>
 
+			<!--
 			<section>
-				<h3>Theory Basics of AA: Dung</h3>
+				<h3>Theory Basics of AA</h3>
 				An abstract argumentation framework $(AF)$ is a pair $(A,D)$, where $A$ is a set of $arguments$ and $D \subseteq A
 				\times A$ is a binary relation of $attacks$.
 			</section>
+			-->
 
 			<section>
-				<h3>Theory Basics of AA: ASPIC+</h3>
+				<h3>Theory Basics of AA: Aspic+</h3>
 				An abstract argumentation framework $(AF)$ is a pair $(A,D)$, where $A$ is a set of $arguments$ and $D \subseteq A
-				\times A$ is a binary relation of $defeat$. We say that $A$ strictly defeats $B$ if $A$ defeats $B$ while $B$ does
-				not defeat $A$. A semantics for $AFs$ returns sets of arguments called $extensions$, which are internally coherent
-				and defend themselves against attacks.
+				\times A$ is a binary relation of $defeat$.
+				<span class="fragment fade-in">We say that $A$ strictly defeats $B$ if $A$ defeats $B$ while $B$ does
+				not defeat $A$.</span><span class="fragment fade-in"> A semantics for $AFs$ returns sets of arguments called $extensions$, which are internally coherent
+				and defend themselves against attacks.</span>
+				<br><br>
+				<div class="center fragment fade-in" style="height: 350px">
+					<img src="img/af.svg">
+				</div>
 			</section>
 
 			<section>
-				<h3>Theory Basics AA: Extensions</h3>
+				<h3>Theory Basics of AA: Extensions</h3>
 				Let $\left(A,D\right)$ be an AF. $\forall X \in A, X$ is acceptable with respect to some $S \subseteq A$
 				iff $\forall Y$ s. t. $(Y,X) \in D \Rightarrow \exists Z \in S$ s. t. $(Z,Y) \in D$.
 				<br><br>
-				Let $S \subseteq A$ be conflict free , i.e. there are no $A,B \in S$ such that $(A,B) \in D$. Then:
+				<span class="fragment fade-in">
+					Let $S \subseteq A$ be conflict free , i.e. there are no $A,B \in S$ such that $(A,B) \in D$. Then:
+				</span>
 				<br><br>
-				<ul style="font-size: 0.8em;">
-					<li>S is an <em class="metronom-logo-yellow">admissible</em> extension iff $X \in S$ implies $X$ is acceptable w.
-						r. t. $S$;</li>
-					<li>S is an <em class="metronom-logo-yellow">complete</em> extension iff $X \in S$ whenever $X$ is acceptable w.
-						r. t. $S$;</li>
-					<li>S is a <em class="metronom-logo-yellow">preferred</em> extension iff it is a set inclusion maximal complete
-						extension;</li>
-					<li>S is the <em class="metronom-logo-yellow">grounded</em> extension iff it is the set inclusion minimal
-						complete extension;</li>
-					<li>S is a <em class="metronom-logo-yellow">stable</em> extension iff it is preferred and $\forall Y \notin S,
-						\exists X \in S$ s. t. $(X,Y) \in D$.</li>
-					</li>
-				</ul>
+				<div class="fragment fade-in">
+					<ul style="font-size: 0.8em;">
+						<li>S is an <em class="metronom-logo-yellow">admissible</em> extension iff $X \in S$ implies $X$ is acceptable w.
+							r. t. $S$;</li>
+						<li>S is an <em class="metronom-logo-yellow">complete</em> extension iff $X \in S$ whenever $X$ is acceptable w.
+							r. t. $S$;</li>
+						<li>S is a <em class="metronom-logo-yellow">preferred</em> extension iff it is a set inclusion maximal complete
+							extension;</li>
+						<li>S is the <em class="metronom-logo-yellow">grounded</em> extension iff it is the set inclusion minimal
+							complete extension;</li>
+						<li>S is a <em class="metronom-logo-yellow">stable</em> extension iff it is preferred and $\forall Y \notin S,
+							\exists X \in S$ s. t. $(X,Y) \in D$.</li>
+						</li>
+					</ul>
+				</div>
 				<br><br>
 				<h3 class="center fragment fade-in">
 					<span class="metronom-red">Not usable for unskilled participants!</span>
 				</h3>
 			</section>
-			
+
 			<section>
 				<h3>The Easy Approach</h3>
 				<div style="height: 450px">
@@ -410,7 +437,7 @@
 				<h3>And now?</h3>
 				<ul>
 					<li>Embedding structured discussions in any website</li>
-					<li>Using D-BAS as execution platform for social bots</li>
+					<li>Using <span class="metronom">D-BAS</span> as execution platform for social bots</li>
 					<li>Network of argument providers</li>
 				</ul>
 			</section>
