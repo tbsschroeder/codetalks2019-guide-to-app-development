@@ -45,10 +45,12 @@
 				<aside class="notes">
 					Who am I: FKOP -> DIID -> PhD -> METROnom
 					<br><br>
-					Online discussions in a larger scale<br>
-					- structure<br>
-					- unskilled participants<br>
-					- scaling
+					Online discussions in a larger scale
+					<ul>
+						<li>structure</li>
+						<li>unskilled participants</li>
+						<li>scaling</li>
+					</ul>
 				</aside>
 			</section>
 
@@ -156,20 +158,23 @@
 					</div>
 				</div>
 				<aside class="notes">
-					Offline:<br>
-					- bound to place and time<br>
-					- face-to-face, small groups<br>
-					- gestures, mimics, tone<br>
-					<br>
-					Online:<br>
-					- independent of time and placement<br>
-					- large number of participants<br>
-					- multiple solutions for discussions
+					Offline:
+					<ul>
+						<li>bound to place and time</li>
+						<li>face-to-face, small groups</li>
+						<li>gestures, mimics, tone</li>
+					</ul>
+					Online:
+					<ul>
+						<li>independent of time and placement</li>
+						<li>large number of participants</li>
+						<li>multiple solutions for discussions</li>
+					</ul>
 				</aside>
 			</section>
 
 			<section>
-				<h3>Advantages & Disadvantages</h3>
+				<h3>Advantages & Disadvantages OP</h3>
 				<table class="center seamless-table" id="custom-list-type-table">
 					<tr>
 						<td>
@@ -206,8 +211,19 @@
 				<ul>
 					<li>Many communities</li>
 					<li>Different software approaches</li>
-					<li>IBM: Watson and Debater</li>
+					<li>IBM:
+						<ul>
+						<li><span style="float: left; width: 5em;">Deep Blue</span> (<a href="http://www-03.ibm.com/ibm/history/ibm100/us/en/icons/deepblue/">HTML</a>, <a href="https://www.youtube.com/embed/wdns2fVUEeE">YouTube</a>)</li>
+						<li><span style="float: left; width: 5em;">Watson</span> (<a href="https://www.ibm.com/watson/">HTML</a>, <a href="https://www.youtube.com/embed/3e22ufcqfTs">YouTube</a>)</li>
+						<li><span style="float: left; width: 5em;">Debater</span> (<a href="https://www.research.ibm.com/artificial-intelligence/project-debater/">HTML</a>, <a href="https://www.youtube.com/embed/UeF_N1r91RQ">YouTube</a>)</li>
+						</ul>
+					</li>
 				</ul>
+				<br><br>
+				<div style="height: 200px; position: absolute; top: 3em; right: 6em;">
+					<img src="img/logo-watson.png">
+				</div>
+				<!--
 				<br>
 				<br>
 				<div style="display: flex;">
@@ -230,8 +246,24 @@
 						</small>
 					</div>
 				</div>
+				-->
 				<aside class="notes">
-					Communites: AAAI, IJCAI, COMMA, AI*IA, ...
+					Communities: AAAI, IJCAI, COMMA, AI*IA, ...
+					<br><br>
+					Deep Blue (Chess) -> Watson (Jeopardy)
+					<br><br>
+					Calculation -> Understanding
+					<br><br>
+					Debater:
+					<ul>
+						<li>Goal: Argumentation like a human!</li>
+						<li>Data: Corpus of ~300M articles</li>
+						<li>Corpus cleaning</li>
+						<li>Indexing & analysis</li>
+						<li>Knowledge Graph</li>
+						<li>Debate & rebuttal construction</li>
+						<li>But it is not open source and has no platform</lifragment>
+					</ul>
 				</aside>
 			</section>
 
@@ -243,7 +275,7 @@
 				<aside class="notes">
 					Pro: well-known, low initial hurdle
 					<br><br>
-					Con: structure, scalibility, redundancy, polarization
+					Con: structure, relation, scalibility, redundancy, polarization
 				</aside>
 			</section>
 
@@ -278,6 +310,7 @@
 					<li><span class="metronom-logo-yellow">System</span> is a representative of users that already participated</li>
 					<li><span class="metronom-logo-yellow">Input</span> of other users are the base of new discussion</li>
 					<li><span class="metronom-logo-yellow">Conducting</span> a dialog with a current user</li>
+					<li>Combine with <span class="metronom-logo-yellow">argumentation theory</span></li>
 				</ul>
 			</section>
 
@@ -293,11 +326,11 @@
 				<br><br>
 				<h3><span class="fragment fade-in metronom-red">Is it usable for unskilled participants?</span></h3>
 				<aside class="notes">
-					Deductive argumentation: incomplete arguments & inference rules
+					Deductive argumentation: incomplete arguments & inference rules (process of reasoning from one or more statements (premises) to reach a logically certain conclusion)
 					<br><br>
-					Probabilistic reasons: probabilistic reason-relation maintained in another argument
+					Probabilistic reasons: probabilistic reason-relation maintained in another argument (group of theories that aim to characterize the relationship between cause and effect)
 					<br><br>
-					Defeasible reasons: attacking and defeating
+					Defeasible reasons: attacking and defeating (the reasoning does not produce a full, complete, or final demonstration of a claim)
 				</aside>
 			</section>
 
@@ -325,7 +358,7 @@
 				</div>
 				<br>
 				<small class="center">
-					<a href="https://dbas.cs.hhu.de">https://dbas.cs.hhu.de</a> & <a href="https://github.com/hhucn">https://github.com/hhucn</a>
+					<a href="https://dbas.cs.uni-duesseldorf.de/discuss/improve-the-course-of-computer-science-studies">https://dbas.cs.hhu.de</a> & <a href="https://github.com/hhucn">https://github.com/hhucn</a>
 				</small>
 			</section>
 
@@ -358,9 +391,11 @@
 					<br><br>
 					Dung: Correctness of arguments / only attacks / special form of logic programming with negation as failure
 					<br><br>
-					ASPIC on top of Dung: <br>
-					- conflicts between arguments are often resolved with explicit preferences<br>
-					- arguments are built inference rules: strict or deductive
+					ASPIC on top of Dung:
+					<ul>
+						<li>conflicts between arguments are often resolved with explicit preferences</li>
+						<li>arguments are built inference rules: strict or deductive</li>
+					</ul>
 				</aside>
 			</section>
 
@@ -406,7 +441,7 @@
 							complete extension;</li>
 						<li>S is a <em class="metronom-logo-yellow">stable</em> extension iff it is preferred and $\forall Y \notin S,
 							\exists X \in S$ s. t. $(X,Y) \in D$.</li>
-						</li>
+						</liragment>
 					</ul>
 				</div>
 				<br><br>
@@ -438,6 +473,14 @@
 					<li>Embedding structured discussions in any website</li>
 					<li>Using <span class="metronom">D-BAS</span> as execution platform for social bots</li>
 					<li>Network of argument providers</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3 style="color: white!important">At <strong>METRO<span class="metronom-logo-yellow">|</span>NOM</strong> ...</h3>
+				<ul>
+					<li>We do not do argumentation theory, but</li>
+					<li>We develop digital solutions in global wholesale business and</li>
 				</ul>
 			</section>
 
@@ -476,7 +519,8 @@
 			controls: false,
 			history: true,
 			center: true,
-			//slideNumber: true,
+			slideNumber: 'c/t',
+			showSlideNumber: 'speaker',
 			transition: 'fade', // none/fade/slide/convex/concave/zoom
 
 			// More info https://github.com/hakimel/reveal.js#dependencies
@@ -512,14 +556,15 @@
 
 		}, 1000);
 
+		
 		if ( window.location.search.match( /print-pdf/gi ) ) {
 			$('#dbas-frame').remove();
-			$('#watson-frame').remove();
-			$('#debater-frame').remove();
+			//$('#watson-frame').remove();
+			//$('#debater-frame').remove();
 		} else {
 			$('#dbas-img').remove();
-			$('#watson-img').remove();
-			$('#debater-img').remove();
+			//$('#watson-img').remove();
+			//$('#debater-img').remove();
 		}
 
 		var footer = $('#footer').html();
