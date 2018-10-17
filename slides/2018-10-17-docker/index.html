@@ -1,78 +1,77 @@
 <!doctype html>
 <html>
-  <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Docker</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-		<!--<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">-->
-		<!--<link rel="stylesheet" href="../../css/theme/metropolis.css">-->
-		<link rel="stylesheet" href="../../css/theme/metronom.css">
+	<title>Docker</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/metronom.css">
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/darcula.css">
+	<link rel="icon" href="docker.png" type="image/png" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-		 	var link = document.createElement( 'link' );
-		 	link.rel = 'stylesheet';
-		 	link.type = 'text/css';
-		 	link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
-		 	document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body class="dark">
-		<div class="reveal">
-			<img src="../../img/metronom-white.png" style="margin: 1em; height: 5%; position: absolute; bottom: 0; left: 0;">
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../reveal.js/css/print/pdf.css' :
+			'../../reveal.js/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
 
-			<div class="slides">
-        <section data-state="footer">
-          <div id="title">
-						<h1>A Small Journey to the Whales</h1>
-						<h1 class="subtitle">Short Introduction into Docker</h1>
-						<img id="docker" src="docker.png" style="margin: 0; background: 0; border: 0; box-shadow: 0 0 0; float: right; height: 20%;">
-            <div><small>METRONOM Düsseldorf, 17th October 2018</small></div>
-						<div><small>Created by Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small></div>
-					</div>
-        </section>
-        
-        <!-- Content -->
-        <section>
-					<h3>What is Docker?</h3>
-					Docker is just ...
-          <ul>
-						<li>another layer of abstraction</li>
-						<li>another tool for automation of OS-level virtualization</li>
-						<li>a hype ... it will pass over</li>
-						<li>some virtual machine</li>
-          </ul>
-        </section>
+<body class="dark">
+	<div class="reveal">
+		<img src="../../img/metronom-white.png" style="margin: 1em; height: 5%; position: absolute; bottom: 0; left: 0;">
 
-        <section>
-          <h3>But it ...</h3>
-          <ul>
-						<li>is small, lightweight and fast</li>
-						<li>summarizes software into images</li>
-						<li>encaspulates and isolates dependencies</li>
-						<li>is easy to scale, reuse and distribute</li>
-          </ul>
-        </section>
+		<div class="slides">
+			<section data-state="footer">
+				<div id="title">
+					<h1>A Short Journey to the Whales</h1>
+					<h1 class="subtitle">Introduction of Docker</h1>
+					<img id="docker" src="docker.png" style="margin: 0; background: 0; border: 0; box-shadow: 0 0 0; float: right; height: 20%;">
+					<div><small>METRO<strong class="metronom-logo-yellow">|</strong>NOM Düsseldorf, 17th October 2018</small></div>
+					<div><small>Created by Dr. Tobias Krauthoff (<a href="mailto: tobias.krauthoff@metronom.com">tobias.krauthoff@metronom.com</a>)</small></div>
+				</div>
+			</section>
 
-        <section>
-          <h3>Docker in a Nutshell</h3>
-          <ul>
-						<li>Instructions are read from a <span class="metronom-logo-yellow">Dockerfile</span></li>
-						<li>Dockerfiles are plain text with commands</li>
-						<li>Docker can assemble <span class="metronom-logo-yellow">containers</span> bases on these files</li>
-						<li>Runtime images of a container are called <span class="metronom-logo-yellow">images</span></li>
-          </ul>
-				</section>
+			<!-- Content -->
+			<section>
+				<h3>What is Docker?</h3>
+				<ul>
+					<li>Just another layer of abstraction</li>
+					<li>Some tool for automation of OS-level virtualization</li>
+					<li>A hype ... it will pass over</li>
+					<li>Some virtual machine</li>
+				</ul>
+			</section>
 
-        <section>
-          <h3>Examples</h3>
-          <pre><code class="sh" data-trim>
+			<section>
+				<h3>But it ...</h3>
+				<ul>
+					<li>Is clean, small, lightweight, safe, portable and fast</li>
+					<li>Summarizes software into images</li>
+					<li>Encapsulates and isolates dependencies</li>
+					<li>Is easy to scale, reuse and distribute</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Docker in a Nutshell</h3>
+				<ul>
+					<li>Based on linux containers (isolated processes but shared kernel)</li>
+					<li>Instructions are read from a <span class="metronom-logo-yellow">Dockerfile</span> (plain text with commands)</li>
+					<li>Docker can assemble <span class="metronom-logo-yellow">containers</span> bases on these files</li>
+					<li>Runtime images of a container are called <span class="metronom-logo-yellow">images</span></li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Example</h3>
+				<pre style="margin: 0; width: 100%"><code class="sh" data-trim>
 			$ docker run hello-world
 			Unable to find image 'hello-world:latest' locally
 			latest: Pulling from library/hello-world
@@ -85,71 +84,92 @@
 					
 			...
           </code></pre>
-        </section>
+			</section>
 
-        <section>
-					<h3>Examples</h3>
-					<ul>
-						<li>Show all images with <span class="metronom-logo-yellow">docker images</span></li>
-						<li>List of containers <span class="metronom-logo-yellow">docker ps -a</span></li>
-						<li>Reuse with <span class="metronom-logo-yellow">docker start –attach <container name></span></li>
-						<li>Stop with <span class="metronom-logo-yellow">docker stop <container name></span></li>
-						<li>Remove with <span class="metronom-logo-yellow">docker rm <container name></span></li>
-						<li>...</li>
-					</ul>
-				</section>
+			<section>
+				<h3>Examples</h3>
+				<table class="center seamless-table" >
+					<tr>
+						<td><ul><li>Show all images</li></ul></td>
+						<td><span class="metronom-logo-yellow">docker images</span></td>
+					</tr>
+					<tr>
+						<td><ul><li>List of containers</li></ul></td>
+						<td><span class="metronom-logo-yellow">docker ps -a</span></td>
+					</tr>
+					<tr>
+						<td><ul><li>Reuse</li></ul></td>
+						<td><span class="metronom-logo-yellow">docker start –-attach <i>container name</i></span></td>
+					</tr>
+					<tr>
+						<td><ul><li>Stop</li></ul></td>
+						<td><span class="metronom-logo-yellow">docker stop <i>container name</i></span></td>
+					</tr>
+					<tr>
+						<td><ul><li>Remove</li></ul></td>
+						<td><span class="metronom-logo-yellow">docker rm <i>container name</i></span></td>
+					</tr>
+					<tr>
+						<td><ul><li>...</li></ul></td>
+						<td>....</td>
+					</tr>
+				</table>
+			</section>
 
-        <section>
-					<h3>Examples</h3>
-					<ul>
-						<li>Alpine linux: <span class="metronom-logo-yellow">docker run -it alpine sh</span></li>
-						<li>Nginx: <span class="metronom-logo-yellow">docker run --name docker-nginx -p 80:80 nginx -d</span></li>
-						<li>There is an image for everything you need</li>
-					</ul>
-				</section>
+			<section>
+				<h3>Examples</h3>
+				<ul>
+					<li>Alpine linux: <span class="metronom-logo-yellow">docker run -it alpine sh</span></li>
+					<li>Nginx: <span class="metronom-logo-yellow">docker run --name docker-nginx -p 80:80 nginx -d</span></li>
+					<li>There is an image for everything you need</li>
+				</ul>
+			</section>
 
-				<section>
-					<h3>More</h3>
-					<ul>
-						<li>Multi container apps via <span class="metronom-logo-yellow">docker-compose</span></li>
-						<li>Keeping your image clean via <span class="metronom-logo-yellow">multi-stage images</span></li>
-						<li>Next lightning talk will be about: <span class="metronom-green">GraalVM</span></li>
-					</ul>
-				</section>
+			<section>
+				<h3>More</h3>
+				<ul>
+					<li>Multi container apps via <span class="metronom-logo-yellow">docker-compose</span></li>
+					<li>Keeping your image clean via <span class="metronom-logo-yellow">multi-stage images</span></li>
+					<li>Next lightning talk: <span class="metronom-green">GraalVM</span> (smaller, faster, less memory)</li>
+				</ul>
+			</section>
 
-				<section>
-					<h1 class="metronom-green">Any questions?</h1>
-					<br>
-					<ul>
-						<li>https://hub.docker.com/</li>
-						<li>https://docs.docker.com/</li>
-					</ul>
-					<br>
-					<br>
-					<small>Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small>
-				</section>
+			<section>
+				<h1 class="metronom-green">Any questions?</h1>
+				<br>
+				<ul>
+					<li>https://hub.docker.com/</li>
+					<li>https://docs.docker.com/</li>
+				</ul>
+				<br>
+				<br>
+				<small>Dr. Tobias Krauthoff (<a href="mailto: tobias.krauthoff@metronom.com">tobias.krauthoff@metronom.com</a>)</small>
+			</section>
 
-		  </div>
+		</div>
 
-		  <script src="../../reveal.js/lib/js/head.min.js"></script>
-		  <script src="../../reveal.js/js/reveal.js"></script>
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
 
-		  <script>
-		    // More info https://github.com/hakimel/reveal.js#configuration
-		    Reveal.initialize({
-         	controls: false,
-			   history: true,
-			   center: true,
-			   //slideNumber: true,
-			   transition: 'fade', // none/fade/slide/convex/concave/zoom
-			   // More info https://github.com/hakimel/reveal.js#dependencies
-			   dependencies: [
-				   /* { src: 'plugin/markdown/marked.js' },
-				      { src: 'plugin/markdown/markdown.js' },*/
-           //				 { src: '../../plugin/notes/notes.js', async: true },
-           { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-			   ]
-		   });
-		  </script>
-	</body>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				history: true,
+				center: true,
+				//slideNumber: true,
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+				dependencies: [
+					{
+						src: '../../reveal.js/plugin/highlight/highlight.js',
+						async: true,
+						callback: function () {
+							hljs.initHighlightingOnLoad();
+						}
+					}
+				]
+			});
+		</script>
+</body>
+
 </html>
