@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>GraalVM</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/metronom.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+		 	var link = document.createElement( 'link' );
+		 	link.rel = 'stylesheet';
+		 	link.type = 'text/css';
+		 	link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
+		 	document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body class="dark">
+		<div class="reveal">
+			<div id="footer">
+				<img alt="" id="footer-left" src="img/metronom-white.png">
+			</div>
+
+			<div class="slides">
+        <section data-state="footer">
+          <div id="title">
+						<h1>The Holy Graal</h1>
+						<h1 class="subtitle">A short glimpse on GraalVM</h1>
+            <div><small>METRO<strong class="metronom-logo-yellow">|</strong>nom Düsseldorf, 28th November 2018</small></div>
+						<div><small>Created by Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small></div>
+					</div>
+        </section>
+        
+				<!-- Content -->
+				
+				<section>
+					<h3>What is GraalVM</h3>
+					<ul>
+						<li>Extension of the JVM</li>
+						<li>Comprehensive ecosystem</li>
+						<li>Supporting a large set of JVM/LLVM-based languages</li>
+						<li>High perfomance</li>
+						<li>Low-footprint</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Motivation</h3>
+					<ul>
+						<li>Docker encaspulates and isolates dependencies</li>
+						<li>GraalVM removes isolation between programming languages; enables interoperability in a shared runtime</li>
+					</ul>
+				</section>
+
+        <section>
+					<h3>Dockerfile</h3>
+					<ul>
+						<li>docker build . -t graalvm</li>
+						<li>docker run --rm -tiv `pwd`:/work -w /work graalvm</li>
+					</ul>
+					<pre style="width: 95%"><code>FROM oraclelinux:7-slim
+
+ENV GRAALVM_PKG=graalvm-ce-1.0.0-rc1-linux-amd64.tar.gz \
+	JAVA_HOME=/usr/graalvm-1.0.0-rc1/jdk \
+	PATH=/usr/graalvm-1.0.0-rc1/bin:$PATH
+
+ADD $GRAALVM_PKG /usr/
+
+RUN yum -y install gcc; \
+	yum -y install zlib-devel;  \
+	alternatives --install /usr/bin/java  java  $JAVA_HOME/bin/java  20000 &&\
+	alternatives --install /usr/bin/javac javac $JAVA_HOME/bin/javac 20000 &&\
+	alternatives --install /usr/bin/jar   jar   $JAVA_HOME/bin/jar   20000</code></pre>
+				</section>
+
+        <section>
+					<h3>Example: Runtime</h3>
+					<pre style="width: 95%"><code>public class HelloWorld {
+	public static void main(String[] args) {
+			System.out.println("Hello World");
+	}
+}</code></pre>
+				</section>
+
+				<section>
+					<h3>Example: Runtime</h3>
+					<table style="width:100%">
+							<tr>
+								<th>JVM</th>
+								<th>Native Image</th>
+							</tr>
+							<tr>
+								<td><pre style="width: 101%; margin: 0;"><code>bash-4.2# time javac HelloWorld.java
+
+real	0m0.455s
+user	0m1.021s
+sys	0m0.071s</code></pre></td>
+								<td class="fragment fade-in" data-fragment-index="2"><pre style="width: 101%; margin: 0;"><code>bash-4.2# time javac HelloWorld.java
+
+real	0m16.183s
+user	0m0.217s
+sys	0m0.045s</code></pre></td>
+							</tr>
+							<tr>
+								<td class="fragment fade-in" data-fragment-index="1"><pre style="width: 101%; margin: 0;"><code>bash-4.2# time java HelloWorld
+Hello World
+
+real	0m0.142s
+user	0m0.123s
+sys	0m0.020s</code></pre></td>
+								<td class="fragment fade-in" data-fragment-index="3"><pre style="width: 101%; margin: 0;"><code>bash-4.2# time ./helloworld
+Hello World
+
+real	0m0.001s
+user	0m0.001s
+sys	0m0.000s</code></pre></td>
+							</tr>
+						</table> 
+				</section>
+
+        <section>
+					<h3>Example: Memory Footprint</h3>
+					<pre style="width: 95%"><code>public class HelloWorldServer {
+	public static void main(String[] args) throws Exception {
+		HttpServer s = HttpServer.create(new InetSocketAddress(8080), 0);
+		s.createContext("/", new MyHandler());
+		s.setExecutor(null);
+		s.start();
+	}
+	static class MyHandler implements HttpHandler {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			t.sendResponseHeaders(200, "Hello World".length());
+			OutputStream os = t.getResponseBody();
+			os.write("Hello World".getBytes());
+			os.close();
+		}
+	}
+}</code></pre>
+				</section>
+
+				<section>
+					<h3>Example: Memory Footprint</h3>
+					<pre style="margin: 0; width: 100%; margin-top: 1em"><code>$ docker run --rm -tiv `pwd`:/work -w /work -p8080:8080 graalvm java HelloWorldServer
+$ docker run --rm -tiv `pwd`:/work -w /work -p8081:8080 graalvm ./helloworldserver</code></pre>
+
+					<pre style="width: 100%"><code>$ docker stats --no-stream --format "table {{.Container}}\t{{.MemUsage}}" hws
+
+CONTAINER           MEM USAGE / LIMIT
+bf7dc2e25740        1.402MiB / 31.34GiB
+c7f9689e7ee5        12.57MiB / 31.34GiB</code></pre>
+				</section>
+
+				<section>
+					<h3>Dockerfile from Scratch</h3>
+					<pre style="margin: 0; width: 100%; margin-top: 1em"><code>FROM oraclelinux:7-slim AS BASE
+
+FROM scratch
+
+COPY --from=BASE /lib64/libc.so.6 /lib64/libc.so.6
+COPY --from=BASE /lib64/libdl.so.2 /lib64/libdl.so.2
+COPY --from=BASE /lib64/libpthread.so.0 /lib64/libpthread.so.0
+COPY --from=BASE /lib64/libz.so.1 /lib64/libz.so.1
+COPY --from=BASE /lib64/librt.so.1 /lib64/librt.so.1
+COPY --from=BASE /lib64/libcrypt.so.1 /lib64/libcrypt.so.1
+COPY --from=BASE /lib64/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
+COPY --from=BASE /lib64/libfreebl3.so /lib64/libfreebl3.so
+
+ADD helloworldserver /
+
+CMD ["/helloworldserver"]</code></pre>
+					<pre style="margin: 0; width: 100%; margin-top: 1em" class="fragment fade-in" data-fragment-index="1"><code>$ docker run --rm -tiv `pwd`:/work -w /work -p8080:8080 graalvm java HelloWorldServer
+$ docker run --rm -tiv `pwd`:/work -w /work -p8081:8080 graalvm ./helloworldserver</code></pre>
+
+					<pre style="width: 100%" class="fragment fade-in" data-fragment-index="1"><code>$ docker stats --no-stream --format "table {{.Container}}\t{{.MemUsage}}" hws
+
+CONTAINER           MEM USAGE / LIMIT
+hws                 1.488MiB / 31.34GiB</code></pre>
+				</section>
+
+        <section>
+					<h3 class="metronom-green">Dos</h3>
+					Try out the GraalVM, when:
+					<br>
+					<ul>
+						<li>Creating new services</li>
+						<li>Having simple tasks</li>
+						<li>Transforming or exporting data</li>
+					</ul>
+				</section>
+
+        <section>
+					<h3><span class="metronom-red">Don'ts</span></h3>
+					Please do not use the GraalVM, when:
+					<br>
+					<ul>
+						<li>Refactoring big services</li>
+						<li>Having dependencies that are not supported (Jacksons FasterXML)</li>
+						<li>Rely on security and stability</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1 class="metronom-logo-yellow">Any questions?</h1>
+					<br>
+					<div class="center">
+						<img src="https://www.graalvm.org/resources/img/graalvm.png">
+					</div>
+					<br>
+					<br>
+					<span class="metronom-blue">tobias.krauthoff@metronom.com</span>
+				</section>
+
+		  </div>
+
+		  <script src="../../reveal.js/lib/js/head.min.js"></script>
+		  <script src="../../reveal.js/js/reveal.js"></script>
+
+		  <script>
+		   // More info https://github.com/hakimel/reveal.js#configuration
+		   Reveal.initialize({
+         controls: false,
+			   history: true,
+         center: true,
+         //       slideNumber: true,
+         transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+			   // More info https://github.com/hakimel/reveal.js#dependencies
+			   dependencies: [
+				   /* { src: 'plugin/markdown/marked.js' },
+				      { src: 'plugin/markdown/markdown.js' },*/
+           //				 { src: '../../plugin/notes/notes.js', async: true },
+           { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			   ]
+		   });
+		  </script>
+	</body>
+</html>
