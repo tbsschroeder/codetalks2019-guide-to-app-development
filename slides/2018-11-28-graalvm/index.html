@@ -37,8 +37,14 @@
 						<div><small>Created by Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small></div>
 					</div>
         </section>
-        
-				<!-- Content -->
+
+				<section>
+					<h3>Motivation</h3>
+					<ul>
+						<li>Docker encaspulates and isolates dependencies</li>
+						<li>GraalVM removes isolation between programming languages;<br>enables interoperability in a shared runtime</li>
+					</ul>
+				</section>
 				
 				<section>
 					<h3>What is GraalVM</h3>
@@ -47,24 +53,12 @@
 						<li>Comprehensive ecosystem</li>
 						<li>Supporting a large set of JVM/LLVM-based languages</li>
 						<li>High perfomance</li>
-						<li>Low-footprint</li>
-					</ul>
-				</section>
-
-				<section>
-					<h3>Motivation</h3>
-					<ul>
-						<li>Docker encaspulates and isolates dependencies</li>
-						<li>GraalVM removes isolation between programming languages; enables interoperability in a shared runtime</li>
+						<li>Low memory-footprint</li>
 					</ul>
 				</section>
 
         <section>
 					<h3>Dockerfile</h3>
-					<ul>
-						<li>docker build . -t graalvm</li>
-						<li>docker run --rm -tiv `pwd`:/work -w /work graalvm</li>
-					</ul>
 					<pre style="width: 95%"><code>FROM oraclelinux:7-slim
 
 ENV GRAALVM_PKG=graalvm-ce-1.0.0-rc1-linux-amd64.tar.gz \
@@ -78,14 +72,16 @@ RUN yum -y install gcc; \
 	alternatives --install /usr/bin/java  java  $JAVA_HOME/bin/java  20000 &&\
 	alternatives --install /usr/bin/javac javac $JAVA_HOME/bin/javac 20000 &&\
 	alternatives --install /usr/bin/jar   jar   $JAVA_HOME/bin/jar   20000</code></pre>
+					<pre style="width: 95%"><code>docker build . -t graalvm
+docker run --rm -tiv `pwd`:/work -w /work graalvm</code></pre>
 				</section>
 
         <section>
 					<h3>Example: Runtime</h3>
 					<pre style="width: 95%"><code>public class HelloWorld {
-	public static void main(String[] args) {
-			System.out.println("Hello World");
-	}
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
 }</code></pre>
 				</section>
 
@@ -102,7 +98,7 @@ RUN yum -y install gcc; \
 real	0m0.455s
 user	0m1.021s
 sys	0m0.071s</code></pre></td>
-								<td class="fragment fade-in" data-fragment-index="2"><pre style="width: 101%; margin: 0;"><code>bash-4.2# time javac HelloWorld.java
+								<td class="fragment fade-in" data-fragment-index="2"><pre style="width: 101%; margin: 0;"><code>bash-4.2# time native-image HelloWorld
 
 real	0m16.183s
 user	0m0.217s
@@ -128,21 +124,23 @@ sys	0m0.000s</code></pre></td>
         <section>
 					<h3>Example: Memory Footprint</h3>
 					<pre style="width: 95%"><code>public class HelloWorldServer {
-	public static void main(String[] args) throws Exception {
-		HttpServer s = HttpServer.create(new InetSocketAddress(8080), 0);
-		s.createContext("/", new MyHandler());
-		s.setExecutor(null);
-		s.start();
-	}
-	static class MyHandler implements HttpHandler {
-		@Override
-		public void handle(HttpExchange t) throws IOException {
-			t.sendResponseHeaders(200, "Hello World".length());
-			OutputStream os = t.getResponseBody();
-			os.write("Hello World".getBytes());
-			os.close();
-		}
-	}
+		
+    public static void main(String[] args) throws Exception {
+        HttpServer s = HttpServer.create(new InetSocketAddress(8080), 0);
+        s.createContext("/", new MyHandler());
+        s.setExecutor(null);
+        s.start();
+    }
+		
+    static class MyHandler implements HttpHandler {
+        @Override
+        public void handle(HttpExchange t) throws IOException {
+            t.sendResponseHeaders(200, "Hello World".length());
+            OutputStream os = t.getResponseBody();
+            os.write("Hello World".getBytes());
+            os.close();
+        }
+    }
 }</code></pre>
 				</section>
 
@@ -151,7 +149,7 @@ sys	0m0.000s</code></pre></td>
 					<pre style="margin: 0; width: 100%; margin-top: 1em"><code>$ docker run --rm -tiv `pwd`:/work -w /work -p8080:8080 graalvm java HelloWorldServer
 $ docker run --rm -tiv `pwd`:/work -w /work -p8081:8080 graalvm ./helloworldserver</code></pre>
 
-					<pre style="width: 100%"><code>$ docker stats --no-stream --format "table {{.Container}}\t{{.MemUsage}}" hws
+					<pre style="width: 100%"><code>$ docker stats --no-stream --format "table {{.Container}}\t{{.MemUsage}}"
 
 CONTAINER           MEM USAGE / LIMIT
 bf7dc2e25740        1.402MiB / 31.34GiB
@@ -173,16 +171,7 @@ COPY --from=BASE /lib64/libcrypt.so.1 /lib64/libcrypt.so.1
 COPY --from=BASE /lib64/ld-linux-x86-64.so.2 /lib64/ld-linux-x86-64.so.2
 COPY --from=BASE /lib64/libfreebl3.so /lib64/libfreebl3.so
 
-ADD helloworldserver /
-
-CMD ["/helloworldserver"]</code></pre>
-					<pre style="margin: 0; width: 100%; margin-top: 1em" class="fragment fade-in" data-fragment-index="1"><code>$ docker run --rm -tiv `pwd`:/work -w /work -p8080:8080 graalvm java HelloWorldServer
-$ docker run --rm -tiv `pwd`:/work -w /work -p8081:8080 graalvm ./helloworldserver</code></pre>
-
-					<pre style="width: 100%" class="fragment fade-in" data-fragment-index="1"><code>$ docker stats --no-stream --format "table {{.Container}}\t{{.MemUsage}}" hws
-
-CONTAINER           MEM USAGE / LIMIT
-hws                 1.488MiB / 31.34GiB</code></pre>
+ADD helloworldserver /</code></pre>
 				</section>
 
         <section>
@@ -193,6 +182,7 @@ hws                 1.488MiB / 31.34GiB</code></pre>
 						<li>Creating new services</li>
 						<li>Having simple tasks</li>
 						<li>Transforming or exporting data</li>
+						<li>Services with pure functions only</li>
 					</ul>
 				</section>
 
@@ -202,7 +192,7 @@ hws                 1.488MiB / 31.34GiB</code></pre>
 					<br>
 					<ul>
 						<li>Refactoring big services</li>
-						<li>Having dependencies that are not supported (Jacksons FasterXML)</li>
+						<li>Having dependencies that are not supported (e.g. Jacksons FasterXML)</li>
 						<li>Rely on security and stability</li>
 					</ul>
 				</section>
