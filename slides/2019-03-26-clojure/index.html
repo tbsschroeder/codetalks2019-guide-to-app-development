@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Clojure</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/metronom.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+		 	var link = document.createElement( 'link' );
+		 	link.rel = 'stylesheet';
+		 	link.type = 'text/css';
+		 	link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
+		 	document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	
+	<body class="dark">
+		<div class="reveal">
+			<div id="footer">
+				<img alt="" id="footer-left" src="img/metronom-white.png">
+			</div>
+
+			<div class="slides">
+        <section data-state="footer">
+          <div id="title">
+						<h1>Why Clojure...</h1>
+						<h1 class="subtitle">..and why these <span class="metronom-red">(
+								<span class="metronom-blue">(
+									<span class="metronom-green">(
+										<span class="metronom-logo-yellow">(
+											<span style="color: white">fancy </span>)
+										</span>)
+									</span>)
+								</span>)
+							</span> brackets?</h1>
+            <div>
+							<small>
+								METRO<strong class="metronom-logo-yellow">|</strong>
+								NOM Düsseldorf, 26th March 2019
+							</small>
+						</div>
+						<!--<div><small>Created by Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small></div>-->
+					</div>
+        </section>
+
+				<section>
+					<h3>In a nutshell</h3>
+					<ul>
+						<li>We all want code:
+							<ul>
+								<li>perfomant</li>
+								<li>secure</li>
+								<li>stable</li>
+							</ul>
+						</li>
+						<li>Runs on inustry-standard platforms like the JVM</li>
+						<li>Pure functions</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h3>In a nutshell 🥜</h3>
+					<ul>
+						<li>Lisp → easy 👶: Brackets, function, parameters</li>
+						<li class="fragment fade-in" data-fragment-index="1">Data structures 🧱: nil, numbers, strings, lists, vectors, maps, sets</li>
+						<li class="fragment fade-in" data-fragment-index="2">Immutability 🛡️ & Laziness 😴</li>
+						<li class="fragment fade-in" data-fragment-index="3">REPL 💖</li>
+						<li class="fragment fade-in" data-fragment-index="4">State 💾 & Concurrency 📡</li>
+						<li class="fragment fade-in" data-fragment-index="5">Spec 👓</li>
+					</ul>
+				</section>
+
+        <section>
+					<h3>Code</h3>
+
+<h6>More Interop</h6>
+<pre data-trim data-noescape><code>(defn is-uppercase? [string]
+	(every? #(Character/isUpperCase %) string))
+</code>
+<code>(is-uppercase? "HELLO")
+=> true
+</code></pre>
+
+<h6>Java Interop</h6>
+<pre class="fragment fade-in" data-fragment-index="1"  data-trim data-noescape><code>(.println (System/out) "hi")
+</code>
+<code>Hi
+=> nil
+</code></pre>
+				</section>
+
+        <section>
+					<h3>Code</h3>
+					<h6>It's easy</h6>
+<pre data-trim data-noescape>
+<code>(+ 1 2 3) => 6</code>
+<code>(take 10 (range)) => [0 1 2 3 4 5 6 8 9 9]</code>
+<code>(reduce + (take 10 (range))) => 45</code></pre>
+
+<h6>Complex stuff</h6>
+<pre class="fragment fade-in" data-fragment-index="2" data-trim data-noescape><code>(defn fibo [] (map first (iterate (fn [[a b]] [b (+ a b)]) [0N 1N])))
+</code>
+<code>(time (nth (take 100000 (fibo)) 99999))
+"Elapsed time: 328.802651 msecs"
+</code></pre>
+				</section>
+
+		  </div>
+
+		  <script src="../../reveal.js/lib/js/head.min.js"></script>
+		  <script src="../../reveal.js/js/reveal.js"></script>
+
+		  <script>
+		   // More info https://github.com/hakimel/reveal.js#configuration
+		   Reveal.initialize({
+         controls: false,
+			   history: true,
+         center: true,
+         //       slideNumber: true,
+         transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+			   // More info https://github.com/hakimel/reveal.js#dependencies
+			   dependencies: [
+				   /* { src: 'plugin/markdown/marked.js' },
+				      { src: 'plugin/markdown/markdown.js' },*/
+           //				 { src: '../../plugin/notes/notes.js', async: true },
+           { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+			   ]
+		   });
+		  </script>
+	</body>
+</html>
