@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>UI Improvements</title>
+
+	<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
+	<link rel="stylesheet" href="../../css/theme/metronom.css">
+	<link rel="stylesheet" href="custom.css">
+	<link rel="stylesheet" href="../../reveal.js/lib/css/darcula.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? '../../reveal.js/css/print/pdf.css' :
+			'../../reveal.js/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body class="dark">
+	<div class="reveal">
+		<img alt="" id="footer-left" src="../../img/metronom-white.png">
+
+		<div class="slides">
+			<section>
+				<div id="title">
+					<h1>UI Improvements</h1>
+					<h1 class="subtitle">Make the Order Management UI great again!</h1>
+					<div><small>METRO<strong class="metronom-logo-yellow"><blink>|</blink></strong>NOM Düsseldorf, April 2nd 2019</small></div>
+					<div><small>Britte, Kai, Tobias, Tobias</small></div>
+					<img src="om.svg" style="width: 200px; height: 200px; position: absolute; top: -2em; right: 1em;">
+				</div>
+			</section>
+
+			<section>
+				<h3>What is the problem?</h3>
+					<span style="display: inline-block; width: 1.5em">
+						<i class="fas fa-map-signs"></i>
+					</span>Too many requests</li>
+					<br>
+					<span style="display: inline-block; width: 1.5em">
+						<i class="fas fa-shipping-fast"></i>
+					</span>Low performance</li>
+					<br>
+					<span style="display: inline-block; width: 1.5em">
+						<i class="fas fa-file-archive"></i>
+					</span>Merge is too slow</li>
+					<br>
+					<span style="display: inline-block; width: 1.5em">
+						<i class="fas fa-ghost"></i>
+					</span>Detail connector haunting</li>
+					<br>
+					<span style="display: inline-block; width: 1.5em">
+						<i class="fas fa-chart-pie"></i>
+					</span>Enrich the dashboard</li>
+			</section>
+
+			<section>
+				<h3>How do we want to solve it?</h3>
+				<ol>
+					<li>Request debouncing</li>
+					<li>Lighthouse optimization</li>
+					<li>Browserify magic</li>
+					<li>Unplug & repair</li>
+					<li>Make it fancy</li>
+				</ol>
+			</section>
+
+			<section>
+				<h3>Why do we need it?</h3>
+				<p>Happy employees & developers</p>
+				<img class="center" src="https://i.pinimg.com/originals/f8/03/4a/f8034a20b4fd96bd19e6682f329589a6.gif">
+			</section>
+
+			<section>
+				<h3>User Storys</h3>
+				As a <strong>employee</strong><br>I want to have a fast loading website <br>
+				So that I make my customers happy.
+				<br><br>
+				As a <strong>developer</strong><br>
+				I want to work with/on good code <br>
+				So that I make the employees and my coworkers happy.<br><br>
+			</section>
+
+			<section>
+				<h1 class="metronom-green">Any questions?</h1>
+			</section>
+
+		</div>
+
+		<script src="../../reveal.js/lib/js/head.min.js"></script>
+		<script src="../../reveal.js/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				history: true,
+				center: true,
+				//slideNumber: true,
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+				dependencies: [
+					{
+						src: '../../reveal.js/plugin/highlight/highlight.js',
+						async: true,
+						callback: function () {
+							hljs.initHighlightingOnLoad();
+						}
+					}
+				]
+			});
+    </script>
+  </div>
+</body>
+
+</html>
