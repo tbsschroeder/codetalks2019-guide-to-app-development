@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en"></html>
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Dive Deep into Argumentation Theory</title>
+	<title>Online Discussion</title>
 
 	<link rel="stylesheet" href="css/fontawesome-5.4.1.all.css">
 	<link rel="stylesheet" href="css/reveal.css">
@@ -15,77 +15,105 @@
 	<link rel="stylesheet" href="css/pin.css">
 
 	<link rel="icon" href="img/favicon.png" type="image/png" />
+
+	<script>
+		var link = document.createElement( 'link' );
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
+		document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
 </head>
 
 <body class="dark">
 	<div class="reveal">
 		<div id="footer">
 			<img alt="" id="footer-left" src="img/metronom-white.png">
-			<img alt="" id="footer-right" src="img/codetalks-white.png">
-    </div>
+			<img alt="" id="footer-right" src="img/wad.svg">
+		</div>
 
 		<div class="slides">
-
-			<!--
-			<section>
-				<div>
-					<h2>Dive Deep into Argumentation Theory</h2>
-					<h1 class="subtitle">Track: Artificial Intelligence</h1>
-					<div><small>code.talks Hamburg, 18th Oct 2018</small></div>
-					<div><small>Created by Dr. Tobias Krauthoff</small></div>
+			<section data-state="footer">
+				<div id="title" class="center" style="width: 80%;">
+					<h1 class="bebas">Deep Dive in Argumentation Theory</h1>
+					<h1 class="subtitle">About the Efficiency of Online Discussions</h1>
+					<div>
+						<!--
+						<small>
+							METRO<strong class="metronom-logo-yellow"><blink>|</blink></strong>NOM Düsseldorf, April 2nd 2019
+						</small>
+						!-->
+						<small>WeAreDevelopers World Congress 2019, Berlin, June xth </small>
+						<br>
+						<small>
+							Dr. Tobias Krauthoff
+							<a href="https://twitter.com/TKrauthoff" target="_blank"><i class="fab fa-twitter" style="padding-left: 1em;"></i> TKrauthoff</a>
+						</small>
+					</div>
 				</div>
 			</section>
-			-->
 
-			<section class="center" data-background-image="img/codetalks-bg.png">
-				<span>Dr. Tobias Krauthoff</span>
-				<br><br>
-				<h2 style="margin: 0;">Dive Deep into Argumentation Theory</h2>
+			<section>
+				<p class="center" style="color: #FF1800">
+					<i class="fas fa-skull-crossbones"></i>
+					Problem: Current online discussion tools do not always work 
+					<i class="fas fa-skull-crossbones"></i>
+				</p>
 				<br>
-				<span>Artificial Intelligence</span>
-				<aside class="notes">
-					Who am I: FKOP -> DIID -> PhD -> METROnom
-					<br><br>
-					Online discussions in a larger scale
-					<ul>
-            <li>structure of user's contributions often lack structure</li>
-            <li>overload of information</li>
-						<li>filter bubbles</li>
-						<li>current tools not usable for unskilled participants</li>
-						<li>tools do not scale with the amount of users</li>
-					</ul>
-				</aside>
+				<p class="fragment fade-in center" style="color: #00FF76">
+					<i class="fas fa-check"></i>
+					Goal: Introduce a new approach for online discussions
+					<i class="fas fa-check"></i>
+				</p>
+				<p class="center" style="position: fixed; bottom: -0.3em; left: 10em; font-size: 0.4em;">
+					Disclaimer: This work is not related to METRO<blink class="metronom-logo-yellow">|</blink>NOM, bases on my academic career and when I say <i>we</i> I mean my professorship.
+				</p>
 			</section>
 
-			<!--
 			<section>
-				<h3>Who am I?</h3>
-				<div class="center">
-					<a href="https://www.fortschrittskolleg.de/en/">
-						<img alt="" class="white-box" style="height: 4.0em;" src="img/logo-fkop.png">
-					</a>
-					<a href="https://diid.hhu.de/en/">
-						<img alt="" class="white-box" style="height: 4.0em;" src="img/logo-diid-short.png">
-					</a>
-					<a href="https://www.tsn.hhu.de/ourgroup/alumni/tobias-krauthoff.html">
-						<img alt="" class="white-box" style="height: 4.0em;" src="img/phd-tux.png">
-					</a>
-					<a href="https://www.metronom.com/">
-						<img alt="" class="white-box" style="height: 4.0em;" src="img/logo-metronom.jpg">
-					</a>
+				<h3>Our Journey</h3>
+				<ul>
+					<li>Motivation & Basics</li>
+					<li>State of the Art</li>
+					<li>Argumentation Theory</li>
+					<li>Take it easy</li>
+				</ul>
+				<div style="height: 250px; width: 200px; position: fixed; top: 9.0em; right: 7em;">
+					<img alt="" src="img/metro/time.svg">
 				</div>
 			</section>
-			-->
+
+			<section data-background-color="#5EC299">
+				<h2>Motivation & Basics</h2>
+				<h5 style="color: #ccc!important">State of the Art</h5>
+				<h5 style="color: #ccc!important">Argumentation Theory</h5>
+				<h5 style="color: #ccc!important">Take it easy</h5>
+			</section>
 
 			<section>
-        <h3>Scope of this Talk</h3>
-        <ul>
-          <li>Citizens are not happy with decision processes</li>
-          <li>Democratic representatives might not always be sufficient</li>
-          <li>Citizens want to participate actively on decisions</li>
+				<h3>Scope of this talk</h3>
+				<ul>
+					<li>Local politics</li>
+					<li>Citizens are not happy with decision processes</li>
+					<li>Democratic representatives might not always <br>be sufficient</li>
+					<li class="fragment highlight-metronom-logo-yellow" data-fragment-index="1">Citizens want to participate actively on decisions</li>
 					<li>Stuttgart 21 $\rightarrow$ Train station at Hamburg Altona</li>
-					<br>
-        </ul>
+					<li class="fragment highlight-metronom-logo-yellow" data-fragment-index="1">Large scale online discussion tools do not scale</li>
+				</ul>
+				<div style="height: 250px; position: fixed; top: 7.0em; right: -1.5em;">
+					<img alt="" src="img/metro/frustrate.svg">
+				</div>
+				<aside class="notes">
+					Railway and urban development project in Stuttgart
+					<br><br>
+					Announced 1994
+					<br><br>
+					Construction 2010
+					<br><br>
+					Opening 2019 &#8594; 2025
+					<br><br>
+					Costs 2.46 bil. &#8594; 10 bil.
+				</aside>
 			</section>
 
 			<section>
@@ -97,37 +125,9 @@
 					<li>Large number of discussion participants</li>
 					<li class="fragment metronom-logo-yellow">Use of argumentation theory for online participation processes</li>
 				</ul>
-				<div style="height: 250px; position: fixed; top: 6em; right: -0.5em;">
-					<img alt="" src="img/metro/m.svg">
+				<div style="height: 250px; position: fixed; top: 6.5em; right: -0.5em;">
+					<img alt="" src="img/metro/motivation.svg">
 				</div>
-			</section>
-
-			<section>
-				<h3>Argumentation Theory?</h3>
-				<ul>
-					<li>Interdisciplinary study
-						<ul>
-							<li>Use of arguments</li>
-							<li>Logic and rhetoric</li>
-						</ul>
-					</li>
-					<li>Origins in epistemology</li>
-					<li>Many kinds of argumentation</li>
-        </ul>
-        <div style="height: 200px; position: absolute; top: 3em; right: 6em;">
-          <img alt="" src="img/calvin.jpg" style="border: 2px solid black">
-          <span class="center" style="font-size: 0.3em; color: gray;">
-            https://www.planetminecraft.com/blog/<br>
-            sexism-in-minecraft--how-to-deal-<br>
-            with-thembe-one-a-boys-perspective/</span>
-        </div>
-				<aside class="notes">
-					Interdisciplinary study: philosophy & mathematics
-					<br><br>
-					Origins in epistemology: the theory of knowledge
-					<br><br>
-					Many kinds of argumentation: conversational, mathematical, scientific, interpretive, legal, political, ...
-				</aside>
 			</section>
 
 			<section>
@@ -157,7 +157,7 @@
 				<div class="fragment fade-in">
 					<h3>Online Discussions</h3>
 					<div class="center">
-            <img alt="" class="svg-box" src="img/phone.svg">
+						<img alt="" class="svg-box" src="img/phone.svg">
 						<img alt="" class="svg-box" src="img/group.svg">
 						<img alt="" class="svg-box" src="img/cloud.svg">
 					</div>
@@ -179,7 +179,7 @@
 			</section>
 
 			<section>
-				<h3>Benefits and their Costs</h3>
+				<h3 style="margin-top: -1em;">Benefits and their Costs for Online Discussions</h3>
 				<table class="center seamless-table" id="custom-list-type-table">
 					<tr>
 						<td>
@@ -208,103 +208,113 @@
 			</section>
 
 			<section data-background-color="#5EC299">
+				<h5 style="color: #ccc!important">Motivation & Basics</h5>
 				<h2>State of the Art</h2>
+				<h5 style="color: #ccc!important">Argumentation Theory</h5>
+				<h5 style="color: #ccc!important">Take it easy</h5>
 			</section>
 
 			<section>
-				<h3>AI meets AT</h3>
-				<ul>
-					<li>Many communities</li>
-					<li>Different software approaches</li>
-					<li>IBM:
-						<ul>
-						<li><span style="float: left; width: 5em;">Deep Blue</span> (<a href="http://www-03.ibm.com/ibm/history/ibm100/us/en/icons/deepblue/">HTML</a>, <a href="https://www.youtube.com/embed/wdns2fVUEeE">YouTube</a>)</li>
-						<li><span style="float: left; width: 5em;">Watson</span> (<a href="https://www.ibm.com/watson/">HTML</a>, <a href="https://www.youtube.com/embed/3e22ufcqfTs">YouTube</a>)</li>
-						<li><span style="float: left; width: 5em;">Debater</span> (<a href="https://www.research.ibm.com/artificial-intelligence/project-debater/">HTML</a>, <a href="https://www.youtube.com/embed/UeF_N1r91RQ">YouTube</a>)</li>
-						</ul>
-					</li>
-				</ul>
-				<br><br>
-				<div style="height: 200px; position: absolute; top: 3em; right: 6em;">
-					<img alt="" src="img/logo-watson.png">
-				</div>
-				<!--
-				<br>
-				<br>
-				<div style="display: flex;">
-					<div style="width: 50%">
-						<p class="metronom-green center">IBM Watson (2014)</p>
-						<iframe id="watson-frame" class="center" width="400" height="225" src="https://www.youtube.com/embed/3e22ufcqfTs" frameborder="0"
-						 allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						 <img alt="" id="watson-img" src="img/watson.png">
-						<small class="center">
-							<a href="https://www.ibm.com/watson/">https://www.ibm.com/watson/</a>
-						</small>
-					</div>
-					<div style="width: 50%">
-						<p class="metronom-green center">IBM Debater (2018)</p>
-						<iframe id="debater-frame" class="center" width="400" height="225" src="https://www.youtube.com/embed/UeF_N1r91RQ" data-ibm="UeF_N1r91RQ"
-						 data-cnet="naQujxmg9gg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-						<img alt="" id="debater-img" src="img/debater.png">
-						<small class="center">
-							<a href="https://www.research.ibm.com/artificial-intelligence/project-debater/">https://www.research.ibm.com/artificial-intelligence/project-debater/</a>
-						</small>
-					</div>
-				</div>
-				-->
-				<aside class="notes">
-					Communities: AAAI, IJCAI, COMMA, AI*IA, ...
-					<br><br>
-					Deep Blue (Chess) -> Watson (Jeopardy)
-					<br><br>
-					From Calculation to  Understanding
-					<br><br>
-					Debater:
-					<ul>
-						<li>Goal: Argumentation like a human!</li>
-						<li>Data: Corpus of ~300M articles</li>
-						<li>Corpus cleaning</li>
-						<li>Indexing & analysis</li>
-						<li>Knowledge Graph</li>
-						<li>Debate & rebuttal construction</li>
-						<li>Not open source / No platform / No service</li>
+				<div style="margin-top: 4em;">
+					<h3>Representation</h3>
+					<ul id="repr-list">
+						<li>Lists & Threads</li>
+						<li>Structured Lists & Threads</li>
+						<li>Argumentation Maps</li>
+						<li>Matrix and Container <br>Approaches</li>
 					</ul>
+				</div>
+				<div class="center" style="width: 55%; position: absolute; top: 0em; right: 0em;">
+					<div data-fragment-index="2" class="fragment fade-in-then-out" style="margin-top: 4em;">
+						<img alt="" src="img/phpbb.png" style="width: 100%;">
+						<small>Software: <a href="https://www.phpbb.com/">phpBB 3.2</a></small>
+					</div>
+					<div data-fragment-index="3" class="fragment fade-in-then-out" style="width: 100%; position: absolute; top: 0em; right: 0em;">
+						<img alt="" src="img/considerit.png">
+						<small>Software: <a href="https://consider.it/">ConsiderIt</a></small>
+					</div>
+					<div data-fragment-index="4" class="fragment fade-in-then-out" style="width: 100%; position: absolute; top: 4em; right: 0em;">
+						<img alt="" src="img/bcivise.png">
+						<small>Software: <a href="https://www.bcisiveonline.com/">bCivise</a></small>
+					</div>
+					<div data-fragment-index="5" class="center fragment fade-in-then-out" style="width: 100%; position: absolute; top: 2em; right: 0em;">
+						<table>
+							<tr style="border-bottom: 1px solid white;">
+								<td style="border-right: 1px solid white;"></th>
+								<td><strong>$A_0$</strong></th>
+								<td><strong>$A_1$</strong></th>
+								<td><strong>$A_2$</strong></th>
+								<td><strong>$A_3$</strong></th>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid white;"><strong>$A_4$</strong></td>
+								<td align="center" class="metronom-green">+</td>
+								<td align="center" class="metronom-red">-</td>
+								<td align="center" class="metronom-blue">/</td>
+								<td align="center" class="metronom-green">+</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid white;"><strong>$A_5$</strong></td>
+								<td align="center" class="metronom-red">-</td>
+								<td align="center" class="metronom-blue">/</td>
+								<td align="center" class="metronom-green">+</td>
+								<td align="center" class="metronom-logo-yellow">o</td>
+							</tr>
+							<tr>
+								<td style="border-right: 1px solid white;"><strong>$A_6$</strong></td>
+								<td align="center" class="metronom-logo-yellow">o</td>
+								<td align="center" class="metronom-logo-yellow">o</td>
+								<td align="center" class="metronom-green">+</td>
+								<td align="center" class="metronom-blue">/</td>
+							</tr>
+						</table>
+						<div style="margin-top: 2em; margin-left: 2.5em; height: 8em; width: 12em; border: 1px solid gainsboro; background-color:rgb(71, 71, 71)">
+							<div style="float: left; height: 2em; width: 6em; border: 1px solid gainsboro; margin: 0.5em;background-color:rgb(51, 51, 51)">
+								<div style="float: left; height: 1.5em; width: 5.5em; border: 1px solid gainsboro; margin: 0.2em; background-color:rgb(220, 200, 150)">
+									<span style="font-size: 0.5em; color:black; padding-left: 0.5em;">...lorem ipsum...</small>
+									</div>
+							</div>
+							<div style="float: left; height: 3em; width: 6em; border: 1px solid gainsboro; margin: 0.5em; background-color:rgb(51, 51, 51)">
+									<div style="float: left; height: 2em; width: 5em; border: 1px solid gainsboro; margin: 0.5em; background-color:rgb(71, 71, 71);">
+										<div style="float: left; height: 0.5em; width: 4.5em; border: 1px solid gainsboro; margin: 0.2em; background-color:rgb(220, 150, 200)"></div>
+										<div style="float: left; height: 0.5em; width: 4.5em; border: 1px solid gainsboro; margin: 0.2em; background-color:rgb(150, 200, 150)"></div>
+									</div>
+							</div>
+							<div style="float: right; height: 4em; width: 3em; border: 1px solid gainsboro; margin: 0.5em; background-color:rgb(51, 51, 51)">
+								<div style="float: left; height: 0.5em; width: 2.5em; border: 1px solid gainsboro; margin: 0.2em; background-color:rgb(220, 200, 150)"></div>
+								<div style="float: left; height: 0.5em; width: 2.5em; border: 1px solid gainsboro; margin: 0.2em; background-color:rgb(220, 150, 200)"></div>
+								<div style="float: left; height: 0.5em; width: 2.5em; border: 1px solid gainsboro; margin: 0.2em; background-color:rgb(150, 200, 220)"></div>
+								<div style="float: left; height: 0.5em; width: 2.5em; border: 1px solid gainsboro; margin: 0.2em; background-color:rgb(150, 200, 150)"></div>
+								</div>
+							</div>
+					</div>
+				</div>
+				<aside class="notes">
+					Forum:<br>
+					&nbsp;&nbsp;Pro: well-known, low initial hurdle<br>
+					&nbsp;&nbsp;Con: structure, relation, scalibility, redundancy,<br>&nbsp;&nbsp;polarisation
+					<br><br>
+					Pro/Con:<br>
+					&nbsp;&nbsp;Pro: structure, ranking<br>
+					&nbsp;&nbsp;Con: same as forum
+					<br><br>
+					Arg Map:<br>
+					&nbsp;&nbsp;Pro: structure, scalibility, redundancy<br>
+					&nbsp;&nbsp;Con: initial hurdle
+					<br><br>
+					&nbsp;&nbsp;Not used
 				</aside>
 			</section>
 
 			<section>
-				<h3>Lists & Threads</h3>
-				<img alt="" src="img/phpbb.png" class="center" style="max-height: 550px;">
-				<br>
-				<small class="center">Software: <a href="https://www.phpbb.com/">phpBB 3.2</a></small>
+				<h3>Kiviat</h3>
+				<div class="center" style="height: 450px;">
+					<img alt="" src="img/kiviat.png" style="border-radius: 10px;">
+				</div>
 				<aside class="notes">
-					Pro: well-known, low initial hurdle
+					Lack of evaluability
 					<br><br>
-					Con: structure, relation, scalibility, redundancy, polarization
-				</aside>
-			</section>
-
-			<section>
-				<h3>Structured Lists & Threads</h3>
-				<img alt="" src="img/considerit.png" class="center" style="max-height: 550px;">
-				<br>
-				<small class="center">Software: <a href="https://consider.it/">ConsiderIt</a></small>
-				<aside class="notes">
-					Pro: structure, ranking
-					<br><br>
-					Con: same as forum
-				</aside>
-			</section>
-
-			<section>
-				<h3>Argumentation Maps</h3>
-				<img alt="" src="img/bcivise.png" class="center" style="max-height: 550px;">
-				<br>
-				<small class="center">Software: <a href="https://www.bcisiveonline.com/">bCivise</a></small>
-				<aside class="notes">
-					Pro: structure, scalibility, redundancy
-					<br><br>
-					Con: initial hurdle
+					Goal of discussion? Consensus?
 				</aside>
 			</section>
 
@@ -313,42 +323,123 @@
 				<ul>
 					<li>Simulate a real world <span class="metronom-logo-yellow">discussion online</span></li>
 					<li><span class="metronom-logo-yellow">System</span> is a representative of users that already participated</li>
-					<li><span class="metronom-logo-yellow">Input</span> of other users are the base of new discussion</li>
-					<li><span class="metronom-logo-yellow">Conducting</span> a dialog with a current user</li>
+					<li><span class="metronom-logo-yellow">Input of other</span> users are the base of new discussion</li>
+					<li><span class="metronom-logo-yellow">Conducting a dialog</span> with a current user</li>
 					<li>Combine with <span class="metronom-logo-yellow">argumentation theory</span></li>
 				</ul>
 			</section>
 
 			<section>
-				<h3>Connect that Idea with AT?</h3>
-				Which kind of argumentation theory?
-				<br><br>
+				<h3>By now we know ...</h3>
 				<ul>
-					<li>Deductive argumentation</li>
-					<li>Probabilistic reasons</li>
-					<li>Defeasible reasons</li>
+					<li>... the problem</li>
+					<li>... the advantages of online discussions</li>
+					<li>... different kinds of visualization</li>
 				</ul>
-				<br><br>
-				<h3><span class="fragment fade-in metronom-red">Is it usable for unskilled participants?</span></h3>
-				<aside class="notes">
-					Deductive argumentation: incomplete arguments & inference rules <i>(process of reasoning from one or more statements (premises) to reach a logically certain conclusion)</i>
-					<br><br>
-					Probabilistic reasons: probabilistic reason-relation maintained in another argument <i>(group of theories that aim to characterize the relationship between cause and effect)</i>
-					<br><br>
-					Defeasible reasons: attacking and defeating <i>(the reasoning does not produce a full, complete, or final demonstration of a claim)</i>
-				</aside>
+
 			</section>
 
 			<section data-background-color="#5EC299">
-				<h2>Let's take it easy</h2>
+				<h5 style="color: #ccc!important">Motivation & Basics</h5>
+				<h5 style="color: #ccc!important">State of the Art</h5>
+				<h2>Argumentation Theory</h2>
+				<h5 style="color: #ccc!important">Take it easy</h5>
 			</section>
 
 			<section>
-				<h3>Flow of Argumentation</h3>
+				<h3>Argumentation Theory?</h3>
+				<ul>
+					<li>Interdisciplinary study
+						<ul>
+							<li>Use of arguments</li>
+							<li>Logic and rhetoric</li>
+						</ul>
+					</li>
+					<li>Origins in epistemology</li>
+					<li>Many kinds of argumentation</li>
+					<li>How does current/everyday argumentation looks like?</li>
+				</ul>
+				<p class="center">
+					<span class="fragment fade-in metronom-logo-yellow" data-fragment-index="2">
+						Deductive argumentation,
+					</span>
+					<span class="fragment fade-in metronom-logo-yellow" data-fragment-index="3">
+						Probabilistic reasons,
+					</span>
+					<span class="fragment fade-in metronom-logo-yellow" data-fragment-index="4">
+						<br>Monotonic theories, ... ?
+					</span>
+				</p>
+				<h3 class="center">
+					<span class="fragment fade-in metronom-red">Is it usable for unskilled participants?</span>
+				</h3>
+				<div style="height: 200px; position: absolute; top: 2.5em; right: 6em;">
+					<img alt="" src="img/calvin.jpg" style="border: 2px solid black">
+					<a class="center" style="font-size: 0.3em; color: gray!important;" href="https://www.planetminecraft.com/blog/sexism-in-minecraft--how-to-deal-with-thembe-one-a-boys-perspective/">
+					https://www.planetminecraft.com/blog/<br>
+					sexism-in-minecraft--how-to-deal-<br>
+					with-thembe-one-a-boys-perspective/
+					</a>
+				</div>
+				<aside class="notes">
+					Interdisciplinary study: philosophy & mathematics
+					<br><br>
+					Origins in epistemology: the theory of knowledge
+					<br><br>
+					Find the grounds for claims in logic and laws for a universal system of knowledge
+					<br><br>
+					Many kinds of argumentation: conversational, mathematical, scientific, interpretive, legal, political, ...
+				</aside>
+			</section>
+
+			<section>
+				<h3>Aspic+</h3>
+				An abstract argumentation framework $(AF)$ is a pair $(A,D)$, where $A$ is a set of <em class="metronom-logo-yellow">arguments</em> and $D \subseteq A \times A$ is a binary relation of <em class="metronom-logo-yellow">defeat</em>. We say that $A$ strictly defeats $B$ if $A$ defeats $B$ while $B$ does not defeat $A$. A semantics for $AFs$ returns sets of arguments called <em class="metronom-logo-yellow">extensions</em>, which are internally coherent and defend themselves against attacks.
+				<br><br>
+				<div class="center" style="height: 350px">
+					<img alt="" src="img/af.svg">
+				</div>
+			</section>
+
+			<section>
+				<h3>Aspic+ Extensions</h3>
+				Let $\left(A,D\right)$ be an AF. $\forall X \in A, X$ is acceptable with respect to some $S \subseteq A$
+				iff $\forall Y$ s. t. $(Y,X) \in D \Rightarrow \exists Z \in S$ s. t. $(Z,Y) \in D$.
+				<br><br>
+					Let $S \subseteq A$ be conflict free , i.e. there are no $A,B \in S$ such that $(A,B) \in D$. Then:
+				<br><br>
+				<ul style="font-size: 0.8em;">
+					<li>S is an <em class="metronom-logo-yellow">admissible</em> extension iff $X \in S$ implies $X$ is acceptable w.
+						r. t. $S$;</li>
+					<li>S is an <em class="metronom-logo-yellow">complete</em> extension iff $X \in S$ whenever $X$ is acceptable w.
+						r. t. $S$;</li>
+					<li>S is a <em class="metronom-logo-yellow">preferred</em> extension iff it is a set inclusion maximal complete
+						extension;</li>
+					<li>S is the <em class="metronom-logo-yellow">grounded</em> extension iff it is the set inclusion minimal
+						complete extension;</li>
+					<li>S is a <em class="metronom-logo-yellow">stable</em> extension iff it is preferred and $\forall Y \notin S,
+						\exists X \in S$ s. t. $(X,Y) \in D$.</li>
+				</ul>
+				<br><br>
+				<h3 class="center fragment fade-in">
+					<span class="metronom-red"><blink>Not usable for unskilled participants!</blink></span>
+				</h3>
+			</section>
+
+			<section data-background-color="#5EC299">
+				<h5 style="color: #ccc!important">Motivation & Basics</h5>
+				<h5 style="color: #ccc!important">State of the Art</h5>
+				<h5 style="color: #ccc!important">Argumentation Theory</h5>
+				<h5 style="color: #ccc!important">Novel Approach</h5>
+				<h2>
+					Let's take it easy <br>
+					<small class="fragment fade-in">What do we really need?</small>
+				</h2>
+			</section>
+
+			<section>
+				<h3>Argumentation Flow</h3>
 				<div style="height: 300px">
-					<!--
-					<img alt="" data-fragment-index="1" class="fragment fade-out" style="position: absolute" src="img/flow.svg">
-					-->
 					<img alt="" data-fragment-index="1" class="fragment fade-out" style="position: absolute" src="img/flow_1.svg">
 					<img alt="" data-fragment-index="1" class="fragment fade-in-then-out" style="position: absolute" src="img/flow_2.svg">
 					<img alt="" data-fragment-index="2" class="fragment fade-in" style="position: absolute" src="img/flow_3.svg">
@@ -366,8 +457,8 @@
 					<a href="https://dbas.cs.uni-duesseldorf.de/discuss/improve-the-course-of-computer-science-studies">
 						https://dbas.cs.hhu.de
 					</a> & 
-					<a href="https://github.com/hhucn">
-						https://github.com/hhucn
+					<a href="https://github.com/hhucn/dbas">
+						https://github.com/hhucn/dbas
 					</a>
 					<a style="position: absolute; bottom: 1em; right: 1em;" href="https://dbas.cs.uni-duesseldorf.de/discuss/improve-the-course-of-computer-science-studies/reaction/295/rebut/297?history=/attitude/299-/justify/299/agree-/reaction/295/rebut/412-/reaction/295/rebut/311">
 						<i class="fas fa-external-link-alt"></i>
@@ -377,94 +468,34 @@
 
 			<section>
 				<h3>Where is the Theory?</h3>
-				<ul>
-					<li>Display</li>
-					<li>Bootstrap</li>
-					<li class="fragment highlight-metronom-logo-yellow" data-fragment-index="1">Feedback</li>
-					<li class="fragment highlight-metronom-logo-yellow" data-fragment-index="1">Navigation</li>
-					<li>Input</li>
-					<li class="fragment metronom-logo-yellow" data-fragment-index="1">Practical use of argumentation theory and maps!</li>
+				<ul style="list-style-type: none;">
+					<li><i style="display: inline-block; width: 1.5em;" class="fas fa-desktop"style="font-size: 0.8em;"></i>Display</li>
+					<li><i style="display: inline-block; width: 1.5em;"class="fas fa-shoe-prints"style="font-size: 0.8em;"></i>Bootstrap</li>
+					<li class="fragment highlight-metronom-logo-yellow" data-fragment-index="1"><i style="display: inline-block; width: 1.5em;" class="fas fa-comments"style="font-size: 0.8em;"></i>Feedback</li>
+					<li class="fragment highlight-metronom-logo-yellow" data-fragment-index="1"><i style="display: inline-block; width: 1.5em;" class="fas fa-route"style="font-size: 0.8em;"></i>Navigation</li>
+					<li><i style="display: inline-block; width: 1.5em;" class="fas fa-keyboard"style="font-size: 0.8em;"></i>Input</li>
+					<li class="fragment metronom-logo-yellow" data-fragment-index="1"><i style="display: inline-block; width: 1.5em;" class="fas fa-hammer"style="font-size: 0.8em;"></i>Practical use of argumentation theory and maps!</li>
 				</ul>
-			</section>
-
-			<section data-background-color="#5EC299">
-				<h2>Argumentation Theory</h2>
-			</section>
-
-			<section>
-				<h3>Theory Basics</h3>
-				<ul>
-					<li>Schema like Toulmin</li>
-					<li>Framework of:
-						<ul>
-							<li>Dung</li>
-							<li>Aspic+</li>
-							<li>...</li>
-						</ul>
-					</li>
-				</ul>
-				<aside class="notes">
-					Toulmin (Philosopher): Schema from 1958
-					<br><br>
-					Dung: Correctness of arguments / only attacks / special form of logic programming with negation as failure
-					<br><br>
-					ASPIC on top of Dung:
-					<ul>
-						<li>conflicts between arguments are often resolved with explicit preferences</li>
-						<li>arguments are built inference rules: strict or deductive</li>
-					</ul>
-				</aside>
-			</section>
-			<section>
-				<h3>Aspic+</h3>
-				An abstract argumentation framework $(AF)$ is a pair $(A,D)$, where $A$ is a set of $arguments$ and $D \subseteq A
-				\times A$ is a binary relation of $defeat$.
-				<span class="fragment fade-in">We say that $A$ strictly defeats $B$ if $A$ defeats $B$ while $B$ does
-				not defeat $A$.</span><span class="fragment fade-in"> A semantics for $AFs$ returns sets of arguments called $extensions$, which are internally coherent
-				and defend themselves against attacks.</span>
-				<br><br>
-				<div class="center fragment fade-in" style="height: 350px">
-					<img alt="" src="img/af.svg">
+				<div style="width: 300px; position: fixed; top: 6.0em; right: 6.0em;">
+					<img alt="" src="img/metro/block.png">
 				</div>
-			</section>
-
-			<section>
-				<h3>Aspic+ Extensions</h3>
-				Let $\left(A,D\right)$ be an AF. $\forall X \in A, X$ is acceptable with respect to some $S \subseteq A$
-				iff $\forall Y$ s. t. $(Y,X) \in D \Rightarrow \exists Z \in S$ s. t. $(Z,Y) \in D$.
-				<br><br>
-				<span class="fragment fade-in">
-					Let $S \subseteq A$ be conflict free , i.e. there are no $A,B \in S$ such that $(A,B) \in D$. Then:
-				</span>
-				<br><br>
-				<div class="fragment fade-in">
-					<ul style="font-size: 0.8em;">
-						<li>S is an <em class="metronom-logo-yellow">admissible</em> extension iff $X \in S$ implies $X$ is acceptable w.
-							r. t. $S$;</li>
-						<li>S is an <em class="metronom-logo-yellow">complete</em> extension iff $X \in S$ whenever $X$ is acceptable w.
-							r. t. $S$;</li>
-						<li>S is a <em class="metronom-logo-yellow">preferred</em> extension iff it is a set inclusion maximal complete
-							extension;</li>
-						<li>S is the <em class="metronom-logo-yellow">grounded</em> extension iff it is the set inclusion minimal
-							complete extension;</li>
-						<li>S is a <em class="metronom-logo-yellow">stable</em> extension iff it is preferred and $\forall Y \notin S,
-							\exists X \in S$ s. t. $(X,Y) \in D$.</li>
-					</ul>
+				<div style="width: 300px; position: fixed; top: 6.0em; right: 6.0em;">
+					<img alt="" src="img/metro/block.png">
 				</div>
-				<br><br>
-				<h3 class="center fragment fade-in">
-					<span class="metronom-red">Not usable for unskilled participants!</span>
-				</h3>
 			</section>
 
 			<section>
 				<h3>The Easy Approach</h3>
 				<div style="height: 450px">
-					<img alt="" style="position: absolute" src="img/argument.svg">
+					<img data-fragment-index="0" class="fragment fade-out" alt="" style="position: absolute" src="img/argument_3.svg">
+					<img data-fragment-index="0" class="fragment fade-in-then-out" alt="" style="position: absolute" src="img/argument_2.svg">
+					<img data-fragment-index="1" class="fragment fade-in-then-out" alt="" style="position: absolute" src="img/argument_1.svg">
+					<img data-fragment-index="2" class="fragment fade-in-then-out" alt="" style="position: absolute" src="img/argument_0.svg">
+					<img data-fragment-index="3" class="fragment fade-in-then-out" alt="" style="position: absolute" src="img/argument.svg">
 				</div>
 				<aside class="notes">
-					Practical approach<br>
-					Set of statements -> arguments<br>
+					Practical approach <br>
+					Set of statements -> arguments <br>
 					Three attacks and one support
 					<br><br>
 					Premise, PremiseGroup, Conclusion, Arguments, Support, Attack, Undermine, Undercut, Rebut
@@ -477,11 +508,94 @@
 			<section>
 				<h3>And now?</h3>
 				<ul>
-					<li>Approach used by D-BAS</li>
-					<li>Embedding structured discussions in any website</li>
-					<li>Using <span class="metronom">D-BAS</span> as execution platform for social bots</li>
+					<li>Dialog flow by D-BAS</li>
+					<li>Embedding structured discussions <br>in any website</li>
+					<li>Using D-BAS as execution <br>platform for social bots</li>
 					<li>Network of argument providers</li>
+					<br>$\Rightarrow$ $discuss$, $Jebediah$ $\&$ $EDEN$
 				</ul>
+				<div style="width: 200px; position: fixed; top: 7.0em; right: 6.0em;">
+					<img alt="" src="img/metro/bigger.png">
+				</div>
+			</section>
+
+			<section>
+				<h3>discuss</h3>
+				<p><span style="color: #FF1800">Problem: </span>Discussions are everywhere on the web, especially on blogs, newspaper articles, ...</p>
+				<p class="fragment fade-in" data-fragment-index="1" style="color: #00FF76">Solution: </p>
+				<ul class="fragment fade-in" data-fragment-index="1">
+					<li>Embed in every web-context utilizing a JS environment
+					<li>Interact with author's argument</li>
+					<li>Jump into discussion</li>
+					<li>Dialog-flow discussions everywhere</li>
+					<li>Connect to EDEN</li>
+					<li><a href="https://github.com/hhucn/discuss">https://github.com/hhucn/discuss</a></li>
+				</ul>
+				<div style="width: 300px; position: fixed; bottom: 1.0em; right: 3.0em;">
+					<img alt="" src="img/metro/stakeholder.png">
+				</div>
+			</section>
+
+			<section>
+				<h3>Jebediah</h3>
+				<p><span style="color: #FF1800">Problem: </span>What about discussion on Social Media? How to connect to them?</p>
+				<p class="fragment fade-in" data-fragment-index="1" style="color: #00FF76">Solution: </p>
+				<ul class="fragment fade-in" data-fragment-index="1">
+				<ul>
+					<li>Classifying the user's input is realized <br>with the help of Google's Dialogflow
+					<br>$\Rightarrow$ Chat-Bot</li>
+					<li><a href="https://github.com/hhucn/jebediah">https://github.com/hhucn/jebediah</a></li>
+				</ul>
+				<div style="width: 300px; position: fixed; bottom: 4.0em; right: 2.0em;">
+					<img alt="" src="img/metro/supermarket.png">
+				</div>
+			</section>
+
+			<section>
+				<h3>EDEN</h3>
+				<p><span style="color: #FF1800">Problem: </span>Newspapers want to stay the origin of provided statements, but also want enrich their discussions.</p>
+				<p class="fragment fade-in" data-fragment-index="1" style="color: #00FF76">Solution: </p>
+				<ul class="fragment fade-in" data-fragment-index="1">
+				<ul>
+					<li>Networked arguments as a resource</li>
+					<li>Media outlets run their own dialog-based <br>argumentation software</li>
+					<li>Join a distribution network</li>
+					<li>Aggregators may have differing policies<br>(argument's validity according to rules)</li>
+					<li><a href="https://github.com/hhucn/eden">https://github.com/hhucn/eden</a></li>
+				</ul>
+				<div style="width: 300px; position: fixed; bottom: 6em; right: 0.5em;">
+					<img alt="" src="img/metro/octo.svg">
+				</div>
+			</section>
+
+			<section>
+				<h3>That's it</h3>
+				<ul>
+					<li>Large scale online discussions have <br>a structure now</li>
+					<li>Advantages over current approaches </li>
+					<li>Community driven approach <br>$\Rightarrow$ No moderators needed</li>
+				</ul>
+				<div style="width: 300px; position: fixed; top: 6.5em; right: 2em;">
+					<img alt="" src="img/metro/sky.svg">
+				</div>
+			</section>
+
+			<section>
+				<h3>
+					<strong style="color: white;">METRO<span class="metronom-logo-yellow"><blink>|</blink></span>NOM</strong>
+				</h3>
+				<ul>
+					<li>Around 2000 METRONOMians in Düsseldorf, Hannover, Berlin, Warsav, Cluj, Brasov & Bucharest</li>
+					<li>Customized IT services and solutions for all METRO countries</li>
+					<li>We offer: everything!</li>
+					<li>Tech-Stack: everything!</li>
+					<li>Just come to our booth</li>
+				</ul>
+				<div style="width: 300px; position: fixed; top: 12em; right: 4em;">
+					<img alt="" src="img/metro/family.svg">
+				</div>
+				<aside class="notes">Offer: business process consulting, development, implementation and support of business solutions
+						tailor-made software and standard software solutions for</aside>
 			</section>
 
 			<section>
@@ -489,34 +603,31 @@
 				<br>
 				<table class="center">
 					<tr>
-						<td class="center"><i class="fab fa-twitter metronom-blue"></i></td>
-						<td><a href="https://twitter.com/joinmetronomnow">@joinmetronomnow</a></td>
+						<td><i class="fab fa-twitter metronom-green"></td>
+						<td>
+							<a href="https://twitter.com/joinmetronomnow">@joinmetronomnow</a>
+							<br>
+							<a href="https://twitter.com/joinmetronomnow">@TKrauthoff</a>
+						</td>
 					</tr>
 					<tr>
-						<td class="center"><i class="far fa-envelope metronom-blue"></i></td>
-						<td><a href="mailto:tobias.krauthoff@metronom.com">tobias.krauthoff@metronom.com</a></td>
+						<td><i class="fa fa-tv metronom-green" style="font-size: 0.8em;"></i></td>
+						<td><a href="http://tiny.cc/aeod">http://tiny.cc/aeod</a></td>
 					</tr>
-					<tr>
-						<td class="center"><i class="fa fa-tv metronom-blue" style="font-size: 0.8em;"></i></td>
-						<td><a href="http://tiny.cc/ddat">http://tiny.cc/ddat</a></td>
-					</tr>
-					<div style="height: 300px; position: absolute; top: 3em; right: 5em;">
-						<img alt="" src="img/metro/leot.png">
-					</div>
 				</table>
+				<div style="height: 300px; position: absolute; top: 3em; right: 5em;">
+					<img alt="" src="img/metro/leot.png">
+				</div>
 			</section>
 
-			<section data-background-color="#484748">
-				<video autoplay muted src="img/metromotion.mp4"></video>
-				<br>
-				<p class="center">
-					<a href="http://tiny.cc/ddat">http://tiny.cc/ddat</a>
-				</p>
-				<aside class="notes">
-					Offices: Düsseldorf, Berlin, Rumania (Bukarest, Brasov)
-					<br><br>
-					Employees: 2000 (Metronom), 300 Devs, 50 FullStack in Ddorf
-				</aside>
+			<section>
+				<h3>Appendix</h3>
+				<ul>
+					<li><a href="https://dbas.cs.uni-duesseldorf.de/discuss/improve-the-course-of-computer-science-studies#graph" target="_blank">Graph</a></li>
+					<li><a href="https://dbas.cs.uni-duesseldorf.de/discuss/archivierung-von-abschlussarbeiten#barometer" target="_blank">Barometer</a></li>
+					<li><a href="https://dbas.cs.uni-duesseldorf.de/review" target="_blank">Review</li>
+					<li><a href="https://github.com/hhucn/" target="_blank">Repositories</a></li>
+				</ul>
 			</section>
 
 		</div>
@@ -524,6 +635,7 @@
 
 	<script src="js/print.js"></script>
 	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/chartjs-2.76.3.bundle.min.js"></script>
 	<script src="js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
 
