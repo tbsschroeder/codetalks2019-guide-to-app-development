@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Software Architect</title>
+
+  <link rel="stylesheet" href="css/fontawesome-5.4.1.all.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/metronom.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <link rel="icon" href="img/favicon.svg" type="image/png" />
+
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../../reveal.js/css/print/pdf.css' :
+      '../../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+
+<body class="dark">
+  <div class="reveal">
+    <div id="footer">
+      <span class="metronom-logo-yellow"
+        style="position: absolute; bottom: 0.61em; left: 3.78em; font-size: 1.5em; font-weight: 900;"><blink>|</blink></span>
+      <img alt="" id="footer-left" src="img/metronom-white-no-bar.png">
+      <img alt="" id="footer-right" src="img/codetalks-logo-white.png">
+    </div>
+
+    <div class="slides">
+      <section class="center" data-background-image="img/codetalks-bg.png">
+        <div id="title" class="center" style="position: absolute; top: 6em; left: 1.5em; width: 90%;">
+          <h1 class="bebas">The good, the Bad and the Ugly<br>Software Architect</h1>
+          <h1 class="subtitle">Do's and Dont's for Everyday</h1>
+          <div>
+            <small>Code.Talks 2019, Hamburg, October xth </small>
+            <br>
+            <small>
+              <span>METRO<strong class="metronom-logo-yellow"><blink>|</blink></strong>NOM</span>
+              <span style="padding: 0 1.5em;">Dr. Tobias Krauthoff</span>
+              <a href="https://twitter.com/TKrauthoff" target="_blank"><i class="metronom-logo-yellow fab fa-twitter"></i><span class="metronom-logo-yellow"> TKrauthoff</span></a>
+            </small>
+          </div>
+          <div style="position: absolute; width: 150%; height: 20%; bottom: -6.5em; left: -6em;"></div>
+        </div>
+        <aside class="notes">
+          Who am I: FKOP -> DIID -> PhD -> METRONOM
+          <br><br>
+        </aside>
+      </section>
+
+      <section>
+        <h1 class="metronom-logo-yellow">Any questions?</h1>
+        <br>
+        <table class="center">
+          <tr>
+            <td><i class="fab fa-twitter metronom-green"></td>
+            <td>
+              <a href="https://twitter.com/joinmetronomnow">@joinmetronomnow</a>
+              <br>
+              <a href="https://twitter.com/joinmetronomnow">@TKrauthoff</a>
+            </td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-tv metronom-green" style="font-size: 0.8em;"></i></td>
+            <td><a href="http://tiny.cc/howtoapp">http://tiny.cc/howtoapp</a></td>
+          </tr>
+        </table>
+        <div style="height: 300px; position: absolute; top: 1em; right: 5em;">
+          <img alt="" src="img/metro/leot.png">
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/print.js"></script>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      printWideAspectRation: true,
+      controls: false,
+      history: true,
+      center: true,
+      slideNumber: 'c/t',
+      showSlideNumber: 'speaker',
+      transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [{
+        src: 'js/notes.js',
+        async: true
+      }, {
+        src: 'js/math.js',
+        async: true
+      }]
+    })
+
+    var footer = $('#footer').html();
+    if (window.location.search.match(/print-pdf/gi)) {
+      Reveal.addEventListener('ready', function (event) {
+        $('.slide-background').append(footer);
+      });
+    } else {
+      $('div.reveal').append(footer);
+    }
+  </script>
+</body>
+
+</html>

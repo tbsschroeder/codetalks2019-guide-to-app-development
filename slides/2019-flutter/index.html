@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>How to App</title>
+
+  <link rel="stylesheet" href="css/fontawesome-5.4.1.all.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/metronom.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <link rel="icon" href="img/favicon.svg" type="image/png" />
+
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../../reveal.js/css/print/pdf.css' :
+      '../../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+
+<body class="dark">
+  <div class="reveal">
+    <div id="footer">
+      <span class="metronom-logo-yellow"
+        style="position: absolute; bottom: 0.61em; left: 3.78em; font-size: 1.5em; font-weight: 900;"><blink>|</blink></span>
+      <img alt="" id="footer-left" src="img/metronom-white-no-bar.png">
+      <img alt="" id="footer-right" src="img/codetalks-logo-white.png">
+    </div>
+
+    <div class="slides">
+      <section class="center" data-background-image="img/codetalks-bg.png">
+        <div id="title" class="center" style="position: absolute; top: 6em; left: 1.5em; width: 90%;">
+          <h1 class="bebas">Cordova, PhoneGap, Corona, Ionic, Weex, Xamarin, Monocross and now Flutter</h1>
+          <h1 class="subtitle">Where is this taking us?</h1>
+          <div>
+            <small>Code.Talks 2019, Hamburg, October xth </small>
+            <br>
+            <small>
+              <span>METRO<strong class="metronom-logo-yellow"><blink>|</blink></strong>NOM</span>
+              <span style="padding: 0 1.5em;">Dr. Tobias Krauthoff</span>
+              <a href="https://twitter.com/TKrauthoff" target="_blank"><i class="metronom-logo-yellow fab fa-twitter"></i><span class="metronom-logo-yellow"> TKrauthoff</span></a>
+            </small>
+          </div>
+          <div style="position: absolute; width: 150%; height: 20%; bottom: -6.5em; left: -6em;"></div>
+        </div>
+        <aside class="notes">
+          Who am I: FKOP -> DIID -> PhD -> METRONOM
+          <br><br>
+        </aside>
+      </section>
+
+      <section>
+        <h3>Scope of this Talk</h3>
+        <ul>
+          <li>Ways to create a mobile app</li>
+          <li>Differences / Pros / Cons</li>
+          <li>What's the best way for you and your company</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Motivation</h3>
+        <ul>
+          <li><span class="bebas">METRO<strong class="metronom-logo-yellow" style="margin: 0 -0.1em">
+                <blink>|</blink>
+              </strong>NOM</span> is the tech unit of the METRO</li>
+          <li>Customized IT services and solutions for all METRO countries</li>
+          <li>Including mobile apps for the customers as well as employees</li>
+        </ul>
+      </section>
+
+      <section data-background-color="#FAAD00">
+        <h2>Ways to create a mobile app</h2>
+        <h5 style="color: #333333!important">Differences / Pros / Cons</h5>
+        <h5 style="color: #333333!important">Best for you and your company</h5>
+      </section>
+
+      <section>
+        <h3>Overview</h3>
+        <ul>
+          <li>Responsive Websites: <i class="fas fa-desktop"></i> <i class="fas fa-mobile-alt"></i></li>
+          <li>Native apps: <i class="fab fa-android"></i> & <i class="fab fa-apple"></i></li>
+          <li>Progressive Web Apps: Service Workers & Workbox <i class="fas fa-cogs"></i></li>
+          <li>Cross Platform Frameworks: Many! <img src="img/flutter_gray.png" style="height: 1em;"></li>
+        </ul>
+      </section>
+
+      <section data-background-color="#5EC299">
+        <h4>Ways to create a mobile app</h4>
+        <span style="font-size: 3.5em; font-weight: 100; position: absolute; top: -0.25em; right: 3.7em;">{</span>
+        <div style="position: absolute; top: -1em; right: 0em;">
+          <span>Responsive Websites</span><br>
+          <span style="color: #444!important">Native Apps</span><br>
+          <span style="color: #444!important">Progressive Web Apps</span><br>
+          <span style="color: #444!important">Cross Platform Frameworks</span>
+        </div>
+        <h5 style="color: #444!important">Differences / Pros / Cons</h5>
+        <h5 style="color: #444!important">Best for you and your company</h5>
+      </section>
+
+      <section>
+        <h3>Responsive Websites</h3>
+        <h6>Mobile first</h6>
+        <div class="center">
+          <img src="img/responsive.gif.bak" style="border-radius: 25px; width: 30%">
+        </div>
+      </section>
+
+      <section data-background-color="#5EC299">
+        <h4>Ways to create a mobile app</h4>
+        <span style="font-size: 3.5em; font-weight: 100; position: absolute; top: -0.25em; right: 3.7em;">{</span>
+        <div style="position: absolute; top: -1em; right: 0em;">
+          <span style="color: #444!important">Responsive Websites</span><br>
+          <span>Native Apps</span><br>
+          <span style="color: #444!important">Progressive Web Apps</span><br>
+          <span style="color: #444!important">Cross Platform Frameworks</span>
+        </div>
+        <h5 style="color: #444!important">Differences / Pros / Cons</h5>
+        <h5 style="color: #444!important">Best for you and your company</h5>
+      </section>
+
+      <section>
+        <h3>Native Apps</h3>
+      </section>
+
+      <section data-background-color="#5EC299">
+        <h4>Ways to create a mobile app</h4>
+        <span style="font-size: 3.5em; font-weight: 100; position: absolute; top: -0.25em; right: 3.7em;">{</span>
+        <div style="position: absolute; top: -1em; right: 0em;">
+          <span style="color: #444!important">Responsive Websites</span><br>
+          <span style="color: #444!important">Native Apps</span><br>
+          <span>Progressive Web Apps</span><br>
+          <span style="color: #444!important">Cross Platform Frameworks</span>
+        </div>
+        <h5 style="color: #444!important">Differences / Pros / Cons</h5>
+        <h5 style="color: #444!important">Best for you and your company</h5>
+      </section>
+
+      <section>
+        <h3>Progressive Web Apps</h3>
+        <h6>Offline first</h6>
+        <div class="center">
+          <img src="img/pwa.gif" style="border-radius: 25px; width: 30%">
+        </div>
+      </section>
+
+      <section data-background-color="#5EC299">
+        <h4>Ways to create a mobile app</h4>
+        <span style="font-size: 3.5em; font-weight: 100; position: absolute; top: -0.25em; right: 3.7em;">{</span>
+        <div style="position: absolute; top: -1em; right: 0em;">
+          <span style="color: #444!important">Native Apps</span><br>
+          <span style="color: #444!important">Progressive Web Apps</span><br>
+          <span style="color: #444!important">Responsive Websites</span><br>
+          <span>Cross Platform Frameworks</span>
+        </div>
+        <h5 style="color: #444!important">Differences / Pros / Cons</h5>
+        <h5 style="color: #444!important">Best for you and your company</h5>
+      </section>
+
+      <section>
+        <h3>Cross Platform Frameworks</h3>
+        <div class="center">
+          <img src="img/cross.gif" style="border-radius: 25px; width: 30%">
+        </div>
+      </section>
+
+      <section data-background-color="#FAAD00">
+        <h5 style="color: #333333!important">Ways to create a mobile app</h2>
+          <h2>Differences / Pros / Cons
+        </h5>
+        <h5 style="color: #333333!important">Best for you and your company</h5>
+      </section>
+
+      <section>
+        <h3>Differences / Pros / Cons</h3>
+      </section>
+
+      <section data-background-color="#FAAD00">
+        <h5 style="color: #333333!important">Ways to create a mobile app</h2>
+          <h5 style="color: #333333!important">Differences / Pros / Cons</h5>
+          <h2>Best for you and your company
+        </h5>
+      </section>
+
+      <section>
+        <h3>Best for you and your company</h3>
+      </section>
+
+      <section>
+        <h1 class="metronom-logo-yellow">Any questions?</h1>
+        <br>
+        <table class="center">
+          <tr>
+            <td><i class="fab fa-twitter metronom-green"></td>
+            <td>
+              <a href="https://twitter.com/joinmetronomnow">@joinmetronomnow</a>
+              <br>
+              <a href="https://twitter.com/joinmetronomnow">@TKrauthoff</a>
+            </td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-tv metronom-green" style="font-size: 0.8em;"></i></td>
+            <td><a href="http://tiny.cc/howtoapp">http://tiny.cc/howtoapp</a></td>
+          </tr>
+        </table>
+        <div style="height: 300px; position: absolute; top: 1em; right: 5em;">
+          <img alt="" src="img/metro/leot.png">
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/print.js"></script>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      printWideAspectRation: true,
+      controls: false,
+      history: true,
+      center: true,
+      slideNumber: 'c/t',
+      showSlideNumber: 'speaker',
+      transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [{
+        src: 'js/notes.js',
+        async: true
+      }, {
+        src: 'js/math.js',
+        async: true
+      }]
+    })
+
+    var footer = $('#footer').html();
+    if (window.location.search.match(/print-pdf/gi)) {
+      Reveal.addEventListener('ready', function (event) {
+        $('.slide-background').append(footer);
+      });
+    } else {
+      $('div.reveal').append(footer);
+    }
+  </script>
+</body>
+
+</html>
