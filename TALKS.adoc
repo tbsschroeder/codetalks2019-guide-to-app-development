@@ -2,8 +2,6 @@
 
 == Gettin on stage
 
-:toc:
-
 * General
 ** Whats is it about?
 ** Do I want to listen to the talk?
