@@ -1,0 +1,98 @@
+= Content
+
+== Gettin on stage
+
+:toc:
+
+* General
+** Whats is it about?
+** Do I want to listen to the talk?
+** Pick curiousity
+
+* Content
+** Best practice
+** Anti patterns
+** Introduction vs expert level
+** Overview vs one deteail
+** Experience
+** Case story (success or failure)
+
+* Write your story / talk
+** The more the better
+** Variants
+** Ask questions
+** Get feedback
+** Take a break
+
+* Afterwards
+** What is your message?
+** Why do you want to talk about?
+** What story do I want to tell?
+** Why is it interesting?
+
+* *The title!*
+
+== Bio
+
+
+=== Current one
+
+Tobias has more than five years experience as a professional full stack developer and joined METRONOM in the mid of last year, after he phinished his academic carreer with an PhD in dialog-based online argumentation. During his last ten years as a developer he also gained experience as an Android and iOS Developer.
+
+In his spare time he loves to do Clojure, and if you don't find him coding then he will standing in front of his barbecue or some dumbbells.
+
+=== Last one
+
+Alumni of the graduation school Online Participation and former board member of the Düsseldorfer Institute for Internet and Democracy. Founder and developer of the myHHU-App. Now he is full stack developer at METRONOM.
+
+
+== Code Talks 2019
+
+=== Hitchhiker's Guide to write Apps more efficient
+
+Did you ever questioned yourself how are you able to serve your customer needs? Should you offer an app? A responsive websites? Should you do cross-platform development, progressive web apps or native apps? There are many patterns and ways to create mobile applications. If you want to have an app on your smartphone, which frameworks or ways are worth the look, where should you start or is your responsive website already enough? The short answer is YES!
+
+In this talk we elaborate different ways of writing apps, providing an overview over the state of the art of frameworks and techniques. I will share my experience as a former Android developer and provide live coding with Google's Flutter for a small Quiz App.
+
+
+=== We are all couch potatoes, so let's add SOFAs to our Services
+
+Definition of a developer: one who programs computers or designs software system, avoids unnecessary dumb work and loves sofas.
+
+By programming and designing software, do you provide a RESTful API, a message queue or something like GraphQL? Where are the benefits or drawbacks for the developer, with which approach one has to code less, but will have a stable interface for the web?
+
+This talk is about adding SOFA for GraphQL of an online marketplace. In the first part we talk about GraphQL as query language for our API. In the second part you can lean back and I will provide a SOFA to your service which creates a RESTful api on top of our current GraphQL server.
+
+* Write your interactive APIs with GraphiQL
+* https://sofa-api.com/docs/
+* https://solace.com/blog/experience-awesomeness-event-driven-microservices/
+* https://medium.com/the-guild/sofa-the-best-way-to-rest-is-graphql-d9da6e8e7693
+
+
+=== How we almost delivered 100 tons of Stracciatella Mousse
+
+It's not a bug, it's a feature! How often do we read or hear this quote? Do you think that your service has a very good test-coverage, a user-focused design and it will never act strange because you got some fancy front-end testing tool or even canary-releases? And then you wonder why bugs appear.
+
+This talk is about how we almost delivered 100 k units of Stracciatella Mousse on time. Even this was really not a bug in production, because employees of our stores acknowledged that specific order, this behaviour sounds very strange. That's why we should take a step back, take a deep breath and have a look at our numbers and metrics. It's important to systematically visualize our gained data on clean and tidy dashboards, to see arbitrary behaviour before someone will drown in a pool of tasty mousse.
+
+- data-driven company aka monitor your data like if it is your code
+
+* It's not a bug: https://mcc5-metrodr.datadoghq.com/dashboard/6k7-r2d-uxd/oom-turnover-statistics?tile_size=m
+* Goal: KPI your Software
+* https://leanstartup.co/how-to-turn-data-and-metrics-into-the-right-kind-of-action/
+* 99.999 kartons ~ 100t
+* https://metro-dr.slack.com/archives/G5C0MQU74/p1558095898011900
+
+
+=== No Pain, no Gain: Using Clojure for Full Stack Apps
+
+Many of us are really into the paradigms of functional programming. Whether we like streams, mappings, pure functions or just immutability of variables and objects. But can you use a modern functional programming language like Clojure for full stack apps? How does it feel when you write your frontend in a functional language and which benefits is the backend going to have?
+
+This talk provides a look at web frameworks in Clojure, dives into the world of lambda expression, and shows to develop a To-Do web app in Clojure. A live demo and coding will complete our functional lookout.
+
+
+=== The Good, the Bad and the Ugly Software Architect
+
+No no, our software architect is rather not violent, nor one won't do gunfights in the desert. Nevertheless the architect will shoot people if they choose the wrong architecture for their next software project, so please listen carefully!
+
+Requirements for big software products are constantly changing over time. We had monolithic structured, micro and macro services as well as serveless architectures. There was REST for communication, now we decouple services via message queues etc. Next to that not all architects are aware of proper decision making processes to choose the right approach or sometimes some teams even don't have an architect. That's why this talk should give you some insight into behavioural patterns of a software architect, whereby we will have a look on the good, the bad and the ugly side.
