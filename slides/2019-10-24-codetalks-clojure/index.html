@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>Clojure</title>
+
+  <link rel="stylesheet" href="css/fontawesome-5.4.1.all.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/metronom.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/cards.css">
+
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+</head>
+
+<body class="dark">
+  <div class="reveal">
+    <div id="footer">
+      <img alt="" id="footer-left" src="img/metronom-white.png">
+      <img alt="" id="footer-right" src="img/codetalks-white.png">
+    </div>
+
+    <div class="slides">
+
+      <section class="center" data-background-image="img/bg/codetalks.png">
+        <span>Dr. Tobias Schröder</span>
+        <br><br>
+        <h1 class="bebas">No Pain, no Gain</h1>
+        <!-- Maybe use a class="subtitle" here -->
+        <h5>Using Clojure for Web Applications</h5>
+        <br>
+        <span>Backend</span>
+      </section>
+
+      <section data-background-image="img/bg/johnlennon.jpg">
+				<aside class="notes">
+          Imagine a world with no side effects<br>
+          Imagine a world with pure functions only<br>
+          Imagine a world with immutable datastructures everyway<br>
+          <br>
+          You may say I'm a dreamer<br>
+          But I'm not the only one<br>
+          I hope some day you'll join us<br>
+          And the world will be as one<br>
+          - John Lennon -
+        </aside>
+      </section>
+
+
+      <section>
+        <h3>Content</h3>
+        <ul>
+          <li>Why clojure</li>
+          <li>Introduction to clojure</li>
+          <li>The web app</li>
+        </ul>
+      </section>
+
+      <section class="center">
+        <div class="cards">
+          <div class="card">
+            <p class="fragment fade-in">Simplicity</p>
+          </div>
+          <div class="card">
+            <p class="fragment fade-in">LISP</p>
+          </div>
+          <div class="card">
+            <p class="fragment fade-in">Interop</p>
+          </div>
+          <div class="card">
+            <p class="fragment fade-in">REPL</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="center">
+        <table>
+          <tr>
+            <td>42 &nbsp; 1.3 &nbsp; 4/3</td>
+            <td>Numbers</td>
+          </tr>
+          <tr class="fragment fade-in metronom-yellow">
+            <td>"foo"</td>
+            <td>Strings</td>
+          </tr>
+          <tr class="fragment fade-in metronom-green">
+            <td>:foo &nbsp; :bar &nbsp; :baz</td>
+            <td>Keywords</td>
+          </tr>
+          <tr class="fragment fade-in metronom-red">
+            <td>[] &nbsp; '() &nbsp; #{} &nbsp; {}</td>
+            <td>Collections (Vector, List, Set, Map)</td>
+          </tr>
+          <tr class="fragment fade-in metronom-blue">
+            <td>true &nbsp; false</td>
+            <td>Booleans</td>
+          </tr>
+        </table>
+				<aside class="notes">
+          Vector: Collection of values with indexes<br>
+          List: Treat it like a stack with peek and pop
+        </aside>
+      </section>
+
+      <section class="center">
+        <ul class="fira no-bullet-points extra-padding-list">
+          <li>
+            <p class="fragment fade-in">map([🐮,🥔,🐔,🌽), cook]</p>
+            <p class="fragment fade-in">=> [🍔,🍟,🍗,🍿]</p>
+          </li>
+          <li>
+            <p class="fragment fade-in">filter([🐮,🌽,🐔,🥔], isVegetarian)</p>
+            <p class="fragment fade-in">=> [🌽,🥔]</p>
+          </li>
+          <li>
+            <p class="fragment fade-in">reduce([🐮,🌽,🐔,🥔])</p>
+            <p class="fragment fade-in">=> 💩</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="center">
+        <ul class="fira no-bullet-points extra-padding-list">
+          <li>
+            <p class="fragment fade-in">(<span class="clj-symbol">def</span> x 42)</p>
+            <p class="fragment fade-in"><span class="clj-res">=></span> #'metro.main/x</p>
+            <p class="fragment fade-in">x</p>
+            <p class="fragment fade-in"><span class="clj-res">=></span> 42</p>
+          </li>
+          <li>
+            <p class="fragment fade-in">(<span class="clj-symbol">defn</span> <span class="clj-arg">square</span> <span
+                class="clj-p1">[<span class="clj-arg">num</span>] (<span class="clj-symbol">*</span> <span
+                  class="clj-arg">num</span> <span class="clj-arg">num</span>)</span>)</p>
+            <p class="fragment fade-in"><span class="clj-res"><span class="clj-res">=></span></span> #'metro.main/square
+            </p>
+            <p class="fragment fade-in">(<span class="clj-symbol">square</span> 4)</p>
+            <p class="fragment fade-in"><span class="clj-res">=></span> 16</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="center">
+        <ul class="fira no-bullet-points extra-padding-list">
+          <li>
+            <p class="fragment fade-in">(<span class="clj-symbol">map</span> <span class="clj-arg">square</span> <span
+                class="clj-p1">[<span class="clj-arg">1 2 3</span>]</span>)</p>
+            <p class="fragment fade-in"><span class="clj-res">=></span>(1 4 9)</p>
+          </li>
+          <li>
+            <p class="fragment fade-in">(<span class="clj-symbol">reduce</span> <span class="clj-arg">+</span> <span
+                class="clj-p1">(<span class="clj-symbol">map</span> <span class="clj-arg">square</span> <span
+                  class="clj-p2">[<span class="clj-arg">1 2 3</span>]</span>)</span>)</p>
+            <p class="fragment fade-in"><span class="clj-res">=></span>14</p>
+          </li>
+        </ul>
+      </section>
+
+      <section data-background-image="img/bg/web.jpg">
+        <ul class="no-bullet-points">
+          <li class="list-bg fragment fade-in">Backend
+            <ul>
+                <li>Web Server</li>
+                <li>Database</li>
+            </ul>
+          </li>
+          <br>
+          <li class="list-bg fragment fade-in">Frontend
+          <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+          </ul>
+        </ul>
+        
+				<aside class="notes">
+          Pedestal / Component / Postgres / Docker / Hiccup
+        </aside>
+      </section>
+
+      <section class="center">
+        <strong style="position: absolute; padding: 15em 0 0 7em">So much new stuff...<br>... need help!</strong>
+        <img src="img/catbrow.jpg" style="border-radius: 0.5em">
+      </section>
+
+      <section>
+        <p class="center">
+          <i class="fab fa-github" style="padding-right: 0.5em"></i>TbsSchroeder
+        </p>
+      </section>
+
+      <section data-background-image="img/bg/johnlennon.jpg">
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/print.js"></script>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      printWideAspectRation: true,
+      controls: false,
+      history: true,
+      center: true,
+      slideNumber: 'c/t',
+      showSlideNumber: 'speaker',
+      transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [{
+        src: 'js/notes.js',
+        async: true
+      }, {
+        src: 'js/math.js',
+        async: true
+      }]
+    })
+
+    var footer = $('#footer').html();
+    if (window.location.search.match(/print-pdf/gi)) {
+      Reveal.addEventListener('ready', function (event) {
+        $('.slide-background').append(footer);
+      });
+    } else {
+      $('div.reveal').append(footer);
+    }
+  </script>
+</body>
+
+</html>

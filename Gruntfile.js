@@ -128,7 +128,7 @@ module.exports = function(grunt) {
 					'css/theme/source/*.sass',
 					'css/theme/source/*.scss',
 					'css/theme/template/*.sass',
-					'css/theme/template/*.scss'
+					'css/theme/template/*.scss',
 				],
 				tasks: 'css-themes'
 			},
