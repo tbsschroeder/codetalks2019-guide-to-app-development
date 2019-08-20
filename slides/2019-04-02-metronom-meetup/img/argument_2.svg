@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="57cm" height="31cm" viewBox="-282 -2 1123 603" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Hintergrund">
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 0; stroke-opacity: 1; stroke-width: 2; stroke: #ffffff" x="-280" y="0" width="400" height="100" rx="10" ry="10"/>
+      <text font-size="28.2222" style="fill: #ffffff; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Lato;font-style:normal;font-weight:normal" x="-80" y="60.2611">
+        <tspan x="-80" y="60.2611">Cats are small</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 0; stroke-opacity: 1; stroke-width: 2; stroke: #ffffff" x="-280" y="100" width="400" height="100" rx="10" ry="10"/>
+      <text font-size="28.2222" style="fill: #ffffff; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Lato;font-style:normal;font-weight:normal" x="-80" y="160.261">
+        <tspan x="-80" y="160.261">Cats are fluffy</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #ffffff; fill-opacity: 0; stroke-opacity: 1; stroke-width: 2; stroke: #ffffff" x="440" y="48.6862" width="400" height="100" rx="10" ry="10"/>
+      <text font-size="28.2222" style="fill: #ffffff; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Lato;font-style:normal;font-weight:normal" x="640" y="108.947">
+        <tspan x="640" y="108.947">I want a cat</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #333333; fill-opacity: 0; stroke-opacity: 1; stroke-width: 2; stroke: #333333" x="-100" y="500" width="400" height="100" rx="10" ry="10"/>
+      <text font-size="28.2222" style="fill: #333333; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Lato;font-style:normal;font-weight:normal" x="100" y="560.261">
+        <tspan x="100" y="560.261">Fluffy animals lose much hair</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #333333; fill-opacity: 0; stroke-opacity: 1; stroke-width: 2; stroke: #333333" x="440" y="320" width="400" height="100" rx="10" ry="10"/>
+      <text font-size="28.2222" style="fill: #333333; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Lato;font-style:normal;font-weight:normal" x="640" y="380.261">
+        <tspan x="640" y="380.261">Cats are capricious</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #333333; fill-opacity: 0; stroke-opacity: 1; stroke-width: 2; stroke: #333333" x="-280" y="300" width="400" height="100" rx="10" ry="10"/>
+      <text font-size="28.2222" style="fill: #333333; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Lato;font-style:normal;font-weight:normal" x="-80" y="360.261">
+        <tspan x="-80" y="360.261">Sphinx cats are not fluffy</tspan>
+      </text>
+    </g>
+    <g>
+      <rect style="fill: #333333; fill-opacity: 0; stroke-opacity: 1; stroke-width: 2; stroke: #333333" x="300" y="500" width="400" height="100" rx="10" ry="10"/>
+      <text font-size="28.2222" style="fill: #333333; fill-opacity: 1; stroke: none;text-anchor:middle;font-family:Lato;font-style:normal;font-weight:normal" x="500" y="560.261">
+        <tspan x="500" y="560.261">I'm allergic to animal hair</tspan>
+      </text>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #333333" x1="640" y1="319.062" x2="640" y2="156.332"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #333333" points="645,162.978 640,152.978 635,162.978 "/>
+    </g>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #333333" x1="-80" y1="206.708" x2="-80" y2="300"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #333333" points="-75,213.354 -80,203.354 -85,213.354 "/>
+    </g>
+    <path style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #5ec299" d="M 120,50 A 51.25,51.25 0 0 1 120,150"/>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #5ec299" x1="160" y1="100" x2="432.301" y2="99.2547"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #5ec299" points="425.668,104.273 435.655,99.2455 425.641,94.2729 "/>
+    </g>
+    <path style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #333333" d="M 200,500 A 113.333,113.333 0 0 1 400,500"/>
+    <g>
+      <line style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #333333" x1="300" y1="440" x2="300" y2="106.708"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 3; stroke: #333333" points="305,113.354 300,103.354 295,113.354 "/>
+    </g>
+  </g>
+</svg>
