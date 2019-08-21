@@ -84,3 +84,9 @@ ul li{
     background-color:rgba(0, 0, 0, 0.5);
     border-radius: 0.5em;
 }
+
+.list-dark-bg {
+    padding: 0.5em !important;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 0.5em;
+}
