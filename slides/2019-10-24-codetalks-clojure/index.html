@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <title>Clojure Web Apps</title>
+  <title>Web Apps with Clojure</title>
 
   <link rel="stylesheet" href="css/fontawesome-5.4.1.all.css">
   <link rel="stylesheet" href="css/reveal.css">
@@ -47,16 +47,6 @@
           And the world will be as one<br>
           - John Lennon -
         </aside>
-      </section>
-
-
-      <section>
-        <h3>Content</h3>
-        <ul>
-          <li>Why clojure</li>
-          <li>Introduction to clojure</li>
-          <li>The web app</li>
-        </ul>
       </section>
 
       <section class="center">
@@ -151,26 +141,26 @@
           <li>
             <p class="fragment fade-in">(<span class="clj-symbol">def</span> x 42)</p>
             <p class="fragment fade-in">x</p>
-            <p class="fragment fade-in"><span class="clj-res">=></span> 42</p>
+            <p class="fragment fade-in"><span class="clj-res">=> 42</span></p>
           </li>
           <li>
             <p class="fragment fade-in">(<span class="clj-symbol">defn</span> <span class="clj-arg">square</span> <span
                 class="clj-p1">[<span class="clj-arg">num</span>] (<span class="clj-symbol">*</span> <span
                   class="clj-arg">num</span> <span class="clj-arg">num</span>)</span>)</p>
             <p class="fragment fade-in">(<span class="clj-symbol">square</span> 4)</p>
-            <p class="fragment fade-in"><span class="clj-res">=></span> 16</p>
+            <p class="fragment fade-in"><span class="clj-res">=> 16</span></p>
           </li>
           <li>
             <p class="fragment fade-in">(<span class="clj-symbol">map</span> <span class="clj-arg">square</span> <span
                 class="clj-p1">[<span class="clj-arg">1 2 3</span>]</span>)</p>
-            <p class="fragment fade-in"><span class="clj-res">=></span> (1 4 9)</p>
+            <p class="fragment fade-in"><span class="clj-res">=> (1 4 9)</span></p>
           </li>
           <li>
             <p class="fragment fade-in">(<span class="clj-symbol">reduce</span> <span class="clj-arg">+</span> <span
                 class="clj-p1">(<span class="clj-symbol">map</span> <span class="clj-arg">square</span> <span
                   class="clj-p2">[<span class="clj-arg">1 2 3</span>]</span>)</span>)</p>
             <p class="fragment fade-in" style="color: gray">;(reduce (+ [1 2 3]))</p>
-            <p class="fragment fade-in"><span class="clj-res">=></span> 14</p>
+            <p class="fragment fade-in"><span class="clj-res">=> 14</span></p>
           </li>
         </ul>
       </section>
@@ -308,13 +298,19 @@
         </div>
       </section>
 
+      <section data-background-image="img/bg/component.jpg">
+        <div class="list-bg" style="position: fixed; top: 3em; left: 0em;">
+          <h3>Component</h3>
+          <ul>
+            <li>Immutable data structure</li>
+            <li>Managed lifecycle of<br>stateful objects</li>
+            <li>Relationships to other<br>components</li>
+          </ul>
+        </div>
+      </section>
+      
       <section class="center">
-        <h3>Component</h3>
-        <ul>
-          <li>Immutable data structure with</li>
-          <li>Managed lifecycle</li>
-          <li>Relationships to other components</li>
-      </ul>
+        <img src="img/component.png" style="width: 70%">
       </section>
 
       <section data-background-image="img/bg/korma.jpeg">
@@ -322,6 +318,10 @@
           <h3>Korma</h3>
           It's just tasty SQL for Clojure!
         </div>
+      </section>
+      
+      <section class="center">
+        <img src="img/korma.png" style="width: 100%">
       </section>
 
       <section data-background-image="img/bg/ring.jpg">
@@ -332,13 +332,23 @@
           <li>Functions for handling<br>parameters, cookies and more</li>
         </ul>
       </section>
+      
+      <section class="center">
+        <img src="img/ring.png" style="width: 70%">
+      </section>
 
-      <section class="center" data-background-image="img/bg/cup.jpg">
-        <h3>Hiccup</h3>
-        <ul>
-          <li>Vectors for elements</li>
-          <li>Maps for attributes</li>
-        </ul>
+      <section data-background-image="img/bg/hiccup.jpg">
+        <div class="center list-dark-bg fragment fade-in" style="width: 40%; margin-top: 10em;">
+          <h3>Hiccup</h3>
+          <ul>
+            <li>Vectors for elements</li>
+            <li>Maps for attributes</li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="center">
+        <img src="img/hiccup.png" style="width: 100%">
       </section>
 
       <section class="center">
@@ -356,7 +366,16 @@
         </h3>
       </section>
 
-      <section data-background-image="img/bg/johnlennon.jpg">
+      <section data-background-image="img/bg/johnlennon-color.jpg">
+        <div class="list-dark-bg center" style="width: 42%">
+          <div style="text-align: justify;">
+            You may say I'm a dreamer<br>
+            But I'm not the only one<br>
+            I hope to day you'll join us<br>
+            And the world will be as one
+          </div>
+          <p style="text-align: right"> John Lennon (1971)</p>
+        </div>
       </section>
 
     </div>
