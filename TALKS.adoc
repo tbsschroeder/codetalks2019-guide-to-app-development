@@ -82,11 +82,11 @@ This talk is about how we almost delivered 100 tons of Stracciatella Mousse. On 
 * https://metro-dr.slack.com/archives/G5C0MQU74/p1558095898011900
 
 
-=== No Pain, no Gain: Using Clojure for Web Applications
+=== No Pain, No Gain: Using Clojure for Web Applications
 
 Many of us are really into the paradigms of functional programming. Whether we like streams, mappings, pure functions or just the immutability of variables and objects. But can you use a modern functional programming language like Clojure for web applications? How does it feel when you write HTML with a functional language and which benefits is the backend going to have?
 
-This talk provides a look at a web framework called Component in Clojure, dives into the world of lambda expression, and shows how to develop a To-Do web app with this framework. A live demo and coding will complete our functional lookout.
+This talk provides a look at a web framework called Component in Clojure, dives into the world of lambda expression, and shows how to develop a WebShop-app with this framework. A live demo and coding will complete our functional lookout.
 
 
 === The Good, the Bad and the Ugly Software Architect

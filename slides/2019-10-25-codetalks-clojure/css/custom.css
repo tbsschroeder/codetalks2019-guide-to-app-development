@@ -112,3 +112,7 @@ ul li{
     background-color:rgba(0, 0, 0, 0.7);
     border-radius: 0.5em;
 }
+
+.shadow-image .slide-background-content {
+    opacity: 0.5;
+}
