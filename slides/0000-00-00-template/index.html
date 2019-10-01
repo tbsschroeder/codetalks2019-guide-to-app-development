@@ -1,87 +1,108 @@
 <!doctype html>
-<html>
-  <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<html lang="en">
 
-		<title>Title</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../../reveal.js/css/reveal.css">
-		<!--<link rel="stylesheet" href="../../reveal.js/css/theme/black.css">-->
-		<!--<link rel="stylesheet" href="../../css/theme/metropolis.css">-->
-		<link rel="stylesheet" href="../../css/theme/metronom.css">
+  <title>Template</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="../../reveal.js/lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/fontawesome-5.4.1.all.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/metronom.css">
+  <!-- comment out metronom.css and use the ones from ../../css/theme/sky.css for non brandes presentations -->
+  <!--<link rel="stylesheet" href="../../css/theme/sky.css">-->
+</head>
 
-		<!-- Printing and PDF exports -->
-		<script>
-		 	var link = document.createElement( 'link' );
-		 	link.rel = 'stylesheet';
-		 	link.type = 'text/css';
-		 	link.href = window.location.search.match( /print-pdf/gi ) ? '../../reveal.js/css/print/pdf.css' : '../../reveal.js/css/print/paper.css';
-		 	document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body class="dark">
-		<div class="reveal">
-			<img id="logo-white" src="../../img/logo-white.png" style="margin: 1em; width: 15%; position: absolute; bottom: 0;">
+<body class="dark">
+  <div class="reveal">
+    <div id="footer">
+      <img alt="" id="footer-left" src="img/metronom-white.png">
+    </div>
 
-			<div class="slides">
-        <section data-state="footer">
-          <div id="title">
-						<h1>HEADER</h1>
-						<h1 class="subtitle">SUBTITLE</h1>
-            <div><small>METRONOM Düsseldorf, XXth YY 2018</small></div>
-						<div><small>Created by Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small></div>
-					</div>
-        </section>
-        
-        <!-- Content -->
+    <div class="slides">
 
-        <section>
-          <h3>...</h3>
-          <ul>
-						<li>... <span class="fragment highlight-metronom-logo-yellow">...</span></li>
-          </ul>
-				</section>
+      <section>
+        <div style="float: right; width: 60%; margin-top: 5em;">
+          <h1>Your fancy Title</h1>
+          <h1 class="subtitle">Your fancy Subtitle</h1>
+          <h2 class="author">Your fancy Author</h2>
+          <h3 class="date">Your fancy Date</h3>
+        </div>
+        <img src="img/metronom-white-yellow.png" style="position: fixed; top: 1em; left: -2.5em; width: 35%">
+        <div style="width: 7em; height: 1.5em; position: fixed; bottom: 0em; left: -4.5em; background-color: #222"></div>
+      </section>
 
-        <section>
-					<h3>...</h3>
-					<ul>
-						<li>... <span class="metronom-logo-yellow">...</span></li>
-						<li>...</li>
-					</ul>
+      <section>
+        <h1>Reveal.js Template for <span class="bebas">METRO<strong class="metronom-logo-yellow"><blink>|</blink>            </strong></span><span class="bebas">NOM</span></h1>
+        <h3>The HTML Presentation Framework</h3>
+        <p>
+          <small>By <a href="https://github.com/hakimel/reveal.js/">https://github.com/hakimel/reveal.js/</a></small>
+        </p>
+      </section>
 
-				<section>
-					<h1>Any questions?</h1>
-					<br>
-					<br>
-					<small>Dr. Tobias Krauthoff (tobias.krauthoff@metronom.com)</small>
-				</section>
+      <section>
+        <h2>Hello There</h2>
+        <p>
+          reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you
+          examples of what it can do.
+        </p>
+      </section>
 
-		  </div>
+      <section data-background-color="#6694CF">
+        <h2>Useful shortcuts</h2>
+        <p>
+          Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take
+          distracting slides off the screen.
+        </p>
+        <p class="fragment fade-in">
+          Press S for presentation mode and seeing your notes.
+        </p>
+        <aside class="notes">
+          I am a Note
+          <br><br>
+          Me too!
+        </aside>
+      </section>
 
-		  <script src="../../reveal.js/lib/js/head.min.js"></script>
-		  <script src="../../reveal.js/js/reveal.js"></script>
+    </div>
+  </div>
 
-		  <script>
-		   // More info https://github.com/hakimel/reveal.js#configuration
-		   Reveal.initialize({
-         controls: false,
-			   history: true,
-         center: true,
-         //       slideNumber: true,
-         transition: 'fade', // none/fade/slide/convex/concave/zoom
+  <script src="js/print.js"></script>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
 
-			   // More info https://github.com/hakimel/reveal.js#dependencies
-			   dependencies: [
-				   /* { src: 'plugin/markdown/marked.js' },
-				      { src: 'plugin/markdown/markdown.js' },*/
-           //				 { src: '../../plugin/notes/notes.js', async: true },
-           { src: '../../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-			   ]
-		   });
-		  </script>
-	</body>
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      printWideAspectRation: true,
+      controls: false,
+      history: true,
+      center: true,
+      slideNumber: 'c/t',
+      showSlideNumber: 'speaker',
+      transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [{
+        src: 'js/notes.js',
+        async: true
+      }, {
+        src: 'js/math.js',
+        async: true
+      }]
+    })
+
+    var footer = $('#footer').html();
+    if (window.location.search.match(/print-pdf/gi)) {
+      Reveal.addEventListener('ready', function (event) {
+        $('.slide-background').append(footer);
+      });
+    } else {
+      $('div.reveal').append(footer);
+    }
+  </script>
+</body>
+
 </html>

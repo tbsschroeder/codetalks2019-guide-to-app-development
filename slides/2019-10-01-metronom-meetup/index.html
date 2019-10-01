@@ -12,9 +12,8 @@
   <link rel="stylesheet" href="css/metronom.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/cards.css">
-  <link rel="stylesheet" href="css/shadow.css">
 
-  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <link rel="icon" href="img/favicon2.png" type="image/png" />
 </head>
 
 <body class="dark">
@@ -25,18 +24,10 @@
 
     <div class="slides">
 
-      <section class="center">
-          <img style="width: 10em;" src="img/clj-skull.png">
+      <section data-background-image="img/bg/gluecksbaerchi.jpg">
       </section>
-      
-      <section class="center metronom-logo-yellow"><strong style="font-size: 5em">!</strong></section>
-      <section class="center metronom-green"><span style="font-size: 5em">λ</span></section>
-      <section class="center metronom-blue"><strong style="font-size: 5em">⌗</strong></section>
 
       <section data-background-image="img/bg/johnlennon.jpg">
-        <div class="fragment fade-in" style="position: absolute; right: 2em; top: 7em;">
-          <img src="img/i3c.png" style="height: 5em;">
-        </div>
         <aside class="notes">
           Imagine a world with no side effects<br>
           Imagine a world with pure functions only<br>
@@ -50,10 +41,18 @@
         </aside>
       </section>
 
-      <section class="center" data-background-color="#333333">
-        <h1 class="text-longshadow" style="font-size: 3em;">No Pain - No Gain</h1>
-        <br>
-        <h2 class="text-longshadow subtitle">Using Clojure for Web Applications</h2>
+      <section data-background-color="#333333">
+        <table style="margin-bottom: 3em;">
+          <tr>
+            <td style="width: 20%">
+                <img src="img/clj-skull.png" style="vertical-align: middle; padding-top:1em;">
+            </td>
+            <td>
+              <h2 style="color: #97b1dc!important">No Pain - No Gain</h2>
+              <h3 style="color: #95ca4c!important">Using Clojure for Web Applications</h3>
+            </td>
+          </tr>
+        </table>
       </section>
 
       <section class="center shadow-image grayscale" data-background-image="img/bg/jenga.jpg">
@@ -106,15 +105,15 @@
       <section class="center">
         <ul class="fira no-bullet-points extra-padding-list">
           <li>
-            <p><span class="clj-symbol">map</span>([🐮,🥔,🐔,🌽), cook]</p>
+            <p><span class="clj-symbol">map</span>([🐮,🥔,🐔,🌽], cook)</p>
             <p class="fragment fade-in"><span class="clj-res">=></span> [🍔,🍟,🍗,🍿]</p>
           </li>
           <li>
-            <p class="fragment fade-in"><span class="clj-symbol">filter</span>([🐮,🌽,🐔,🥔], isVegetarian)</p>
-            <p class="fragment fade-in"><span class="clj-res">=></span> [🌽,🥔]</p>
+            <p class="fragment fade-in"><span class="clj-symbol">filter</span>([🍔,🍟,🍗,🍿], isVegetarian)</p>
+            <p class="fragment fade-in"><span class="clj-res">=></span> [🍟,🍿]</p>
           </li>
           <li>
-            <p class="fragment fade-in"><span class="clj-symbol">reduce</span>([🐮,🌽,🐔,🥔], eat)</p>
+            <p class="fragment fade-in"><span class="clj-symbol">reduce</span>([🍔,🍟,🍗,🍿], eat)</p>
             <p class="fragment fade-in"><span class="clj-res">=></span> 💩</p>
           </li>
         </ul>
@@ -182,31 +181,38 @@
           </div>
         </div>
 
-        <aside class="notes">
-          Pedestal / Component / Postgres / Docker / Hiccup
-        </aside>
       </section>
 
       <section class="center">
         <h3 style="color: #FAAD00 !important">Amazing Web Shop</h3>
-        <a href="localhost:8080" target="_blank">
-          <img src="img/shop.png" style="width: 80%">
-        </a>
+        <img src="img/shop.png" style="width: 80%">
       </section>
 
-      <section>
-        <h3 class="center">
-          <a href="https://github.com/tbsschroeder" target="_blank">
-            <i class="fab fa-github" style="padding-right: 0.5em"></i>TbsSchroeder
-          </a>
-        </h3>
+      <section data-background-image="img/bg/gluecksbaerchi.jpg">
+        <h4 class="center" style="margin-top: 16.5em;">
+          <strong class="center" style="background: #222222; border-radius: 0.2em; padding: 0.4em 0.5em 0.2em 0.4em;">
+            <i class="fab fa-twitter metronom-blue" style="padding-right: 0.3em"></i>
+            <span class="metronom-green">TbsSchroeder</span> 
+            <span class="metronom-yellow">/</span> 
+            <span class="metronom-red">joinmetronomnow</span>
+          </strong>
+        </h4>
       </section>
 
+      <!--
       <section data-background-image="img/bg/johnlennon.jpg">
+        <strong class="center" style="background-color: #222222; border-radius: 0.5em; padding: 0.3em 0.4em 0.1em 0.3em; position: absolute; top: -3em; left: -2em;">
+          <a href="https://github.com/tbsschroeder" target="_blank">
+            <i class="fab fa-github" style="padding-right: 0.3em"></i>
+            TbsSchroeder
+            <i class="fab fa-twitter" style="padding-left: 0.3em"></i>
+          </a>
+        </strong>
         <div style="position: absolute; right: 2em; top: 7em;">
           <img src="img/i3c.png" style="height: 5em;">
         </div>
       </section>
+      -->
 
     </div>
   </div>
