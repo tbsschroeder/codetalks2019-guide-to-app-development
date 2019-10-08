@@ -1,5 +1,8 @@
+ul li{
+    list-style-type: disc!important;
+}
 .center {
-    display: block!important;
+    /* display: block!important; */
     margin-left: auto!important;
     margin-right: auto!important;
     text-align: center!important;
@@ -26,39 +29,15 @@
     margin: 0 0.5em !important;
 }
 
-#custom-list-type-table ul {
-    list-style-type:none;
+.no-bullet-points > li {
+    list-style-type: none !important;
+    margin: 0!important;
 }
-
-#custom-list-type-table ul {
-    padding-left: 0;
-    padding-right: 0;
+.extra-padding-list li {
+    padding: 0.5em !important;
 }
-
-#custom-list-type-table td:nth-child(1) li::before{
-    color: #64c25e; 
-    font-size: 0.7em;
-    content: "✔ ";
-}
-
-#custom-list-type-table td:nth-child(2) li::before{
-    color: #FAAD00; 
-    font-size: 0.7em;
-    content: "• ";
-}
-
-#custom-list-type-table td:nth-child(3) li::before{
-    color: #E34229; 
-    font-size: 0.7em;
-    content: "✘ ";
-}
-
-.seamless-table {
-    border: none !important;
-}
-
-.seamless-table td {
-    padding: 0 0.2em !important;
+.extra-padding-list p {
+    margin: 0 !important;
 }
 
 #footer-left{
@@ -78,17 +57,66 @@
     max-height: 10%;
 }
 
-@-webkit-keyframes blink {
-    from {
-        opacity: 1.0;
-    }
-    to {
-        opacity: 0.0;
-    }
+.clj-symbol {
+    color: #5EC299 !important;
+    font-weight: bold
 }
-blink {
-    -webkit-animation-name: blink;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
-    -webkit-animation-duration: 1s;
+
+.clj-arg {
+    color: #6694CF !important
+}
+
+.clj-res {
+    padding-right: 0.25em !important;
+    color: #fa8000 !important;
+}
+
+.clj-p1 {
+    color: #ff2c2d !important;
+}
+
+.clj-p2 {
+    color: #ffd900 !important;
+}
+
+.clj-core {
+    color: #f92672 !important
+}
+.clj-func {
+    color: #a6e22e !important
+}
+.clj-str {
+    color: #fd971f !important
+}
+
+.list-bg {
+    padding: 0.5em !important;
+    background-color:rgba(0, 0, 0, 0.5);
+    border-radius: 0.1em;
+}
+
+.list-bg-blue {
+    padding: 0.5em !important;
+    background-color:rgba(40, 79, 183, 0.6);
+    border-radius: 0.1em;
+}
+
+.list-bg-orange {
+    padding: 0.5em !important;
+    background-color:rgba(183, 157, 40, 0.7);
+    border-radius: 0.1em;
+}
+
+.list-dark-bg {
+    padding: 0.5em !important;
+    background-color:rgba(0, 0, 0, 0.7);
+    border-radius: 0.5em;
+}
+
+.shadow-image .slide-background-content {
+    opacity: 0.5;
+}
+
+.grayscale .slide-background-content {
+    filter: grayscale(100%);
 }
