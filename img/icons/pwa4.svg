@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="6cm" height="4cm" viewBox="-1 0 110 66" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="Hintergrund">
+    <ellipse style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ffffff" cx="10.83" cy="12" rx="10" ry="10"/>
+    <ellipse style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ffffff" cx="10.83" cy="12" rx="4" ry="4"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke: #ffffff" x1="20" y1="8" x2="10.83" y2="8"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke: #ffffff" x1="2.78" y1="6.06" x2="7.37" y2="14"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke: #ffffff" x1="9.71" y1="21.94" x2="14.29" y2="14"/>
+    <rect style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #ffffff" x="36" y="42" width="16" height="16" rx="2" ry="2"/>
+    <rect style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #ffffff" x="41" y="47" width="6" height="6" rx="0" ry="0"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" x1="41" y1="39" x2="41" y2="42"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" x1="47" y1="39" x2="47" y2="42"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" x1="41" y1="58" x2="41" y2="61"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" x1="47" y1="58" x2="47" y2="61"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" x1="52" y1="47" x2="55" y2="47"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" x1="52" y1="52" x2="55" y2="52"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" x1="33" y1="47" x2="36" y2="47"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" x1="33" y1="52" x2="36" y2="52"/>
+    <ellipse style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" cx="98" cy="44" rx="10" ry="10"/>
+    <line style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" x1="88" y1="44" x2="108" y2="44"/>
+    <path style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linejoin: round; stroke: #ffffff" d="M 98 34 C 100.501,36.7384 101.923,40.292 102,44 C 101.923,47.708 100.501,51.2616 98,54 C 95.4987,51.2616 94.0772,47.708 94,44 C 94.0772,40.292 95.4987,36.7384 98,34 C 98,34 98,34 98,34"/>
+    <polygon style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke: #ffffff" points="72,2 62,7 72,12 82,7 72,2 "/>
+    <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" points="62,17 72,22 82,17 "/>
+    <polyline style="fill: none; stroke-opacity: 1; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; stroke: #ffffff" points="62,12 72,17 82,12 "/>
+    <text font-size="3.95111" style="fill: #ffffff; fill-opacity: 1; stroke: none;text-anchor:start;font-family:Lato;font-style:normal;font-weight:normal" x="6" y="28">
+      <tspan x="6" y="28">Page</tspan>
+    </text>
+    <g>
+      <path style="fill: none; stroke-opacity: 1; stroke-width: 0.6; stroke-linejoin: round; stroke: #5ec299" d="M 18.0616,20.2847 A 62.4596,62.4596 0 0 0 35.0704,40.1978"/>
+      <polyline style="fill: none; stroke-opacity: 1; stroke-width: 0.6; stroke: #5ec299" points="31.1937,39.8592 35.6032,40.6051 33.5542,36.63 "/>
+    </g>
+    <text font-size="3.95111" style="fill: #ffffff; fill-opacity: 1; stroke: none;text-anchor:start;font-family:Lato;font-style:normal;font-weight:normal" x="32" y="66">
+      <tspan x="32" y="66">Service Worker</tspan>
+    </text>
+    <text font-size="3.95111" style="fill: #ffffff; fill-opacity: 1; stroke: none;text-anchor:start;font-family:Lato;font-style:normal;font-weight:normal" x="72" y="28">
+      <tspan x="72" y="28">Cache</tspan>
+    </text>
+    <text font-size="3.95111" style="fill: #ffffff; fill-opacity: 1; stroke: none;text-anchor:start;font-family:Lato;font-style:normal;font-weight:normal" x="90.875" y="59.75">
+      <tspan x="90.875" y="59.75">Network</tspan>
+    </text>
+    <text font-size="3.95111" style="fill: #5ec299; fill-opacity: 1; stroke: none;text-anchor:start;font-family:Lato;font-style:normal;font-weight:normal" x="26" y="30">
+      <tspan x="26" y="30">1</tspan>
+    </text>
+  </g>
+</svg>

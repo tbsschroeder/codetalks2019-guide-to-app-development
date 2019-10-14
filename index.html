@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>How to App</title>
+
+  <link rel="stylesheet" href="css/fontawesome-5.4.1.all.css">
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/metronom.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/demo.css">
+
+  <link rel="icon" href="img/favicon.svg" type="image/png" />
+</head>
+
+<body class="dark">
+  <div class="reveal">
+    <div id="footer">
+      <img id="footer-left" src="img/metronom-white-yellow.png">
+      <img id="footer-right" src="img/codetalks-logo-white.png">
+    </div>
+
+    <div class="slides">
+      
+      <section class="center" data-background-image="img/bg/codetalks.png">
+        <h1 class="bebas">Hitchhiker's Guide to efficient App Development</h1>
+        <small>code.talks 2019, Hamburg, October 25th </small>
+        <br>
+        <small>
+          <span style="padding: 0 1.5em;">Dr. Tobias Schröder</span>
+          <a href="https://twitter.com/TKrauthoff" target="_blank"><i class="metronom-logo-yellow fab fa-twitter"></i><span class="metronom-logo-yellow"> tbsschroeder</span></a>
+        </small>
+      </section>
+
+      <section class="grayscale" data-background-image="img/bg/hitchhiker.jpg">
+        <span class="photo-credits" style="left: 60%; right:5%">
+            Photo by <a href="https://unsplash.com/@matteopaga" target="_blank">Matteo Paganelli</a> on Unsplash
+        </span>
+      </section>
+
+      <section data-background-image="img/bg/question.jpg">
+        <span class="photo-credits">
+            Photo by <a href="https://unsplash.com/@jontyson" target="_blank">Jon Tyson</a> on Unsplash
+        </span>
+      </section>
+
+      <section class="grayscale center" data-background-image="img/bg/question.jpg" data-background-opacity="0.2">
+        <div class="flex-wrap center">
+          <div class="rainbow-card card-space"><p class="fragment fade-in">Concept</p></div>
+          <div class="rainbow-card card-space"><p class="fragment fade-in">Competitors</p></div>
+          <div class="rainbow-card card-space"><p class="fragment fade-in">Audience</p></div>
+          <div class="rainbow-card card-space"><p class="fragment fade-in">Platforms</p></div>
+          <div class="rainbow-card card-space"><p class="fragment fade-in">Security</p></div>
+          <div class="rainbow-card card-space"><p class="fragment fade-in">Design</p></div>
+          <div class="rainbow-card card-space"><p class="fragment fade-in">Future</p></div>
+          <div class="rainbow-card card-space"><p class="fragment fade-in">Your IT</p></div>
+        </div>
+      </section>
+
+      <section data-background-image="img/bg/question.jpg">
+      </section>
+
+      <!--
+      <section data-background-image="img/bg/smartphone.jpg">
+        <span class="photo-credits" style="left: 75%; right:5%">Photo by dhe haivan on Unsplash</span>
+      </section>
+
+      <section class="grayscale" data-background-image="img/bg/smartphone.jpg" data-background-opacity="0.15">
+        <div class="flex-wrap center" style="width: 110%; position: absolute; left: -1.5em;">
+          <div class="card card-space">
+            <p class="fragment fade-in">Website</p>
+          </div>
+          <div class="card card-space">
+            <p class="fragment fade-in">PWA</p>
+          </div>
+          <div class="card card-space">
+            <p class="fragment fade-in">Native</p>
+          </div>
+          <div class="card card-space">
+            <p class="fragment fade-in">Crossplatform</p>
+          </div>
+        </div>
+      </section>
+      -->
+
+      <section data-background-image="img/bg/css.jpg">
+        <span class="photo-credits" style="color:gray">
+            Photo by <a href="https://unsplash.com/@thomast_404" target="_blank">Thomas Tastet</a> on Unsplash
+        </span>
+      </section>
+
+      <section data-background-image="img/bg/css.jpg" data-background-opacity="0.2">
+        <h3>Responsive Website</h3>
+        <aside class="notes">
+          response website - any size / any screen<br>
+          mobile first<br>
+          <br>
+          <!--https://www.mockplus.com/blog/post/pros-and-cons-of-responsive-web-design-->
+          pro: user friendly, cost saving, seo friendly<br>
+          con: IE, loading times, development, layout<br>
+          <br>
+          PWAs
+        </aside>
+      </section>
+
+      <section data-background-image="img/pwa.png">
+        <span class="photo-credits">Photo by <a href="https://developers.google.com/" target="_blank">Google Developers</a></span>
+      </section>
+
+      <section class="center">
+        <img src="img/pwa-reliable.png" style="width: 80%">
+        <span class="photo-credits">Photo by <a href="https://developers.google.com/" target="_blank">Google Developers</a></span>
+      </section>
+
+      <section class="center">
+        <img src="img/pwa-fast.png" style="width: 80%">
+        <span class="photo-credits">Photo by <a href="https://developers.google.com/" target="_blank">Google Developers</a></span>
+      </section>
+
+      <section class="center">
+          <img src="img/pwa-engaging.png" style="width: 78%">
+          <span class="photo-credits">Photo by <a href="https://developers.google.com/" target="_blank">Google Developers</a></span>
+      </section>
+
+      <section class="center">
+          <img src="img/pwa-lighthouse.png" style="width: 80%">
+          <span class="photo-credits">Photo by <a href="https://developers.google.com/" target="_blank">Google Developers</a></span>
+      </section>
+
+      <section class="center">
+        <ul class="no-bullet-points center" style="margin-left: 0 !important;">
+          <li style="font-size: 2em;">Mobile First</li>
+          <li style="font-size: 2em;">API First</li>
+          <li style="font-size: 2em; border: 5px solid #222; border-radius: 15px;">&nbsp;Offline First&nbsp;</li>
+        </ul>
+      </section>
+
+      <section class="center">
+        <!--https://codelabs.developers.google.com/codelabs/your-first-pwapp-->
+        <span style="font-size: 17em; color: #FAAD00">{}</span>
+      </section>
+
+      <section class="center">
+        <span style="font-size: 17em; color: #FAAD00; position: absolute; left: 0em; top: -0.13em;">{</span>
+        <span style="font-size: 17em; color: #FAAD00; position: absolute; right: 0em; top: -0.13em;">}</span>
+          <pre style="font-size: 1em; box-shadow: none; width: 67%"><code data-trim data-noescape style="height: 35em; position: inherit;"><span class="fragment fade-in" data-fragment-index=0><span style="color: #6694CF">"name"</span>: "Weather",</span>
+<span class="fragment fade-in" data-fragment-index=0><span style="color: #6694CF">"short_name"</span>: "Weather",</span>
+<span class="fragment fade-in" data-fragment-index=1><span style="color: #6694CF">"icons"</span>: [{</span>
+  <span class="fragment fade-in" data-fragment-index=2=><span style="color: #6694CF">"src"</span>: "/images/icon-128x128.png",</span>
+  <span class="fragment fade-in" data-fragment-index=2><span style="color: #6694CF">"sizes"</span>: "128x128",</span>
+  <span class="fragment fade-in" data-fragment-index=2><span style="color: #6694CF">"type"</span>: "image/png"</span>
+  <span class="fragment fade-in" data-fragment-index=1>}, ... ],</span>
+<span class="fragment fade-in" data-fragment-index=3><span style="color: #6694CF">"start_url"</span>: "/index.html",</span>
+<span class="fragment fade-in" data-fragment-index=3><span style="color: #6694CF">"display"</span>: "standalone",</span>
+<span class="fragment fade-in" data-fragment-index=3><span style="color: #6694CF">"background_color"</span>: "#5EC299 <span class="red-bg">  </span>",</span>
+<span class="fragment fade-in" data-fragment-index=3><span style="color: #6694CF">"theme_color"</span>: "#E34229 <span class="green-bg">  </span>"</span></code></pre>
+      </section>
+
+      <section class="center" style="height: 85%;">
+        <span class="photo-credits" style="left: 60%">Image idea by <a href="https://codelabs.developers.google.com/codelabs/your-first-pwapp">Google Developers</a></span>
+        <img src="img/icons/pwa5.svg" style="width: 85%;">
+      </section>
+
+      <section class="center" style="height: 85%;">
+        <span class="photo-credits" style="left: 60%">Image idea by <a href="https://codelabs.developers.google.com/codelabs/your-first-pwapp">Google Developers</a></span>
+        <img src="img/icons/pwa4.svg" style="width: 85%;">
+      </section>
+
+      <section class="center" style="height: 85%;">
+        <span class="photo-credits" style="left: 60%">Image idea by <a href="https://codelabs.developers.google.com/codelabs/your-first-pwapp">Google Developers</a></span>
+        <img src="img/icons/pwa3.svg" style="width: 85%;">
+      </section>
+
+      <section class="center" style="height: 85%;">
+        <span class="photo-credits" style="left: 60%">Image idea by <a href="https://codelabs.developers.google.com/codelabs/your-first-pwapp">Google Developers</a></span>
+        <img src="img/icons/pwa2.svg" style="width: 85%;">
+      </section>
+
+      <section class="center" style="height: 85%;">
+        <span class="photo-credits" style="left: 60%">Image idea by <a href="https://codelabs.developers.google.com/codelabs/your-first-pwapp">Google Developers</a></span>
+        <img src="img/icons/pwa1.svg" style="width: 85%;">
+      </section>
+
+      <section class="center" style="height: 85%;">
+        <span class="photo-credits" style="left: 60%">Image idea by <a href="https://codelabs.developers.google.com/codelabs/your-first-pwapp">Google Developers</a></span>
+        <img src="img/icons/pwa0.svg" style="width: 85%;">
+      </section>
+
+      <section class="center" style="height: 85%;">
+        <img src="img/code/sw0.png" style="width: 85%;">
+      </section>
+
+      <section class="center" style="height: 85%;">
+        <img src="img/code/sw1.png" style="width: 85%;">
+      </section>
+
+      <section class="center" style="height: 85%;">
+        <img src="img/code/sw2.png" style="width: 85%;">
+      </section>
+
+      <section class="grayscale" data-background-image="img/bg/ethernet.jpg">
+        <span class="photo-credits">
+          Photo by <a href="https://unsplash.com/@steve_j" target="_blank">Steve Johnson</a> on Unsplash
+        </span>
+      </section>
+
+      <section class="grayscale" data-background-image="img/bg/appdev.jpg" data-background-opacity="0.5">
+        <!--<h3>Native App</h3>-->
+        <aside class="notes">
+          time, budget and feature
+        </aside>
+      </section>
+
+      <section data-background-image="img/bg/hogwarts.jpg" data-background-opacity="0.8">
+        <span class="photo-credits" style="color: black; left: 75%;">
+          Photo by <a href="https://unsplash.com/@wagner2074" target="_blank" style="color: #000!important">Christian Wagner</a> on Unsplash
+        </span>
+        <aside class="notes">
+          reuse code<br>
+        </aside>
+      </section>
+
+      <section class="center">
+        <img src="img/dart.png" style="height: 10em;">
+        <br><br><br>
+        <div class="fragment fade-in" data-fragment-index="0" style="width: 20%; position: absolute; top: 0em;">
+          <div class="flex-wrap center" style="flex-direction: column;">
+            <div class="rainbow-card card-space rainbow-col1"><p class="fragment fade-in">Open</p></div>
+            <div class="rainbow-card card-space rainbow-col1"><p class="fragment fade-in">Easy</p></div>
+            <div class="rainbow-card card-space rainbow-col1"><p class="fragment fade-in">Skia</p></div>
+            <div class="rainbow-card card-space rainbow-col1"><p class="fragment fade-in">Fast</p></div>
+          </div>
+        </div>
+        <div class="fragment fade-in" data-fragment-index="0" style="width: 20%; position: absolute; top: 0em; right: 0em">
+          <div class="flex-wrap center" style="flex-direction: column;">
+            <div class="rainbow-card card-space rainbow-col2"><p class="fragment fade-in">Type Safe</p></div>
+            <div class="rainbow-card card-space rainbow-col2"><p class="fragment fade-in">AOT</p></div>
+            <div class="rainbow-card card-space rainbow-col2"><p class="fragment fade-in">JIT</p></div>
+            <div class="rainbow-card card-space rainbow-col2"><p class="fragment fade-in">UI</p></div>
+          </div>
+        </div>
+        <aside class="notes">
+            Dart => C++ => Skia (iOS & Android)<br>
+            Xamarin => C# => Mono (no Swift)<br>
+        </aside>
+      </section>
+
+      <section class="center">
+        <img src="img/flutter.png" style="height: 10em;">
+        <br><br>
+        <ul class="no-bullet-points list-inline">
+          <li class="fragment fade-in">
+            <span class="metronom-green" style="padding: 0 0.5em; font-size: 1.5em">Beautiful</span>
+          </li>
+          <li class="fragment fade-in">
+            <span class="metronom-yellow" style="padding: 0 0.5em; font-size: 1.5em">Fast</span>
+          </li>
+          <li class="fragment fade-in">
+            <span class="metronom-red" style="padding: 0 0.5em; font-size: 1.5em">Productive</span>
+          </li>
+          <li class="fragment fade-in">
+            <span class="metronom-blue" style="padding: 0 0.5em; font-size: 1.5em">Open</span>
+          </li>
+        </ul>
+        <aside class="notes">
+          development on every system (Xamarin C#)<br>
+          everything is a widget<br>
+        </aside>
+      </section>
+
+      <section class="center">
+        <div id="frame">
+          <div id="top-bar">
+            <span id="clock">12:00</span>
+            <div id="antenna"></div>
+            <div id="battery1"></div>
+            <div id="battery2"></div>
+          </div>
+          <img id="logo" src="img/white_yellow_blink.gif">
+          <span id="welcome">
+            Welcome to the Quiz App of METRONOM. The biggest software company you never heard about.
+          </span>
+          <button id="start" class="button">
+            <span>
+              Start our Quiz
+            </span>
+          </button>
+          <div id="bottom-bar">
+            <div id="back"></div>
+            <div id="home"></div>
+            <div id="overview"></div>
+          </div>
+        </div>
+      </section>
+
+      <section data-background-image="img/bg/hitchhiker.jpg">
+      </section>
+
+
+      <section class="center">
+        <h4 class="metronom-logo-yellow">You'll find me at the booth!</h4>
+        <img src="img/qrcode.png" style="height: 10em; margin-top: 2em;">
+        <div style="position: absolute; left: 0em; top: 6.5em; width: 6em;">
+          <img src="img/thumb.png">
+        </div>
+        <div style="position: absolute; right: -1em; top: 5em; width: 10em;">
+          <img src="img/marvin.jpg">
+        </div>
+        <div class="center" style="background: #222222; border-radius: 0.5em; padding: 0.4em 0.5em 0.2em 0.4em; margin-top: 2em; font-size: 0.8em; width: 80%">
+          <strong>
+            <div>
+              <table>
+                <tr>
+                  <td>
+                    <span class="metronom-logo-yellow" style="vertical-align: middle; padding-top:1em;">
+                      <i class="fab fa-twitter"></i>
+                      <span>and</span>
+                      <i class="fab fa-instagram"></i>:
+                    </span>
+                  </td>
+                  <td>
+                    <span class="metronom-yellow">@tbsschroeder</span><br>
+                    <span class="metronom-yellow">@joinmetronomnow</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div>
+              <span class="metronom-red">#METRONOMians</span> 
+              <span class="metronom-green">#codetalkshh</span> 
+              <span class="metronom-red">#passion</span> 
+              <span class="metronom-blue">#ambition</span> 
+              <span class="metronom-green">#purpose</span>
+            </div>
+          </strong>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="js/print.js"></script>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/arrows.js"></script>
+
+  <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      printWideAspectRation: true,
+      controls: false,
+      history: true,
+      center: true,
+      slideNumber: 'c/t',
+      showSlideNumber: 'speaker',
+      transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+      // More info https://github.com/hakimel/reveal.js#dependencies
+      dependencies: [{
+        src: 'js/notes.js',
+        async: true
+      }, {
+        src: 'js/math.js',
+        async: true
+      }]
+    })
+
+    var footer = $('#footer').html();
+    if (window.location.search.match(/print-pdf/gi)) {
+      Reveal.addEventListener('ready', function (event) {
+        $('.slide-background').append(footer);
+      });
+    } else {
+      $('div.reveal').append(footer);
+    }
+  </script>
+</body>
+
+</html>
