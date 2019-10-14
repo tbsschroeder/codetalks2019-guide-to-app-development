@@ -1,0 +1,50 @@
+.center {
+  display: block!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+  text-align: center!important;
+}
+
+.color-table div{
+  border-radius: 15px;
+}
+
+.color-table span {
+  font-size: 3em;
+}
+
+.t0{
+  background: yellow;
+  color: orange;
+}
+.t1{
+  background: green;
+  color: red;
+  height: 3em;
+}
+.t1 span{
+  font-size: 0.5em!important;
+}
+.t2{
+
+}
+.t3{
+  background: lightblue;
+  color: black;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center
+}
+
+.flex-container > div {
+  border-radius: 15px;
+  margin: 1em;
+}
+
+.flex-container > div > span {
+  font-size: 2em;
+  margin: 1em;
+  color: #222222;
+}

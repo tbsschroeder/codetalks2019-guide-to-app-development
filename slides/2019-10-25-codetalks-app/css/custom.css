@@ -1,46 +1,61 @@
-ul li{
-    list-style-type: disc!important;
+ul li {
+    list-style-type: disc !important;
 }
+
 .center {
     /* display: block!important; */
-    margin-left: auto!important;
-    margin-right: auto!important;
-    text-align: center!important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
 }
 
 .box {
-    padding: 0.2em!important;
-    border: 2px solid #fff!important;
-    border-radius: 10px!important;
+    padding: 0.2em !important;
+    border: 2px solid #fff !important;
+    border-radius: 10px !important;
     background: rgba(255, 255, 255, 0.2);
 }
 
+.rounded-box {
+    border-radius: 10px !important;
+}
+
+.rounded-box span {
+    line-height: 2;
+}
+
 .white-box {
-    margin: 0.5em!important;
-    padding: 0.1em!important;
-    border-radius: 10px!important;
-    border: 2px solid #fff!important;
+    margin: 0.5em !important;
+    padding: 0.1em !important;
+    border-radius: 10px !important;
+    border: 2px solid #fff !important;
     background: #fff;
 }
 
-.svg-box{
+.svg-box {
     height: 3.5em;
     filter: invert(100%);
     margin: 0 0.5em !important;
 }
 
-.no-bullet-points > li {
+.no-bullet-points>li {
     list-style-type: none !important;
-    margin: 0!important;
+    margin: 0 !important;
 }
+
 .extra-padding-list li {
     padding: 0.5em !important;
 }
+
 .extra-padding-list p {
     margin: 0 !important;
 }
 
-#footer-left{
+.list-inline li {
+    display: inline;
+}
+
+#footer-left {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -48,7 +63,8 @@ ul li{
     height: 1.5em;
     max-height: 10%;
 }
-#footer-right{
+
+#footer-right {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -82,41 +98,131 @@ ul li{
 .clj-core {
     color: #f92672 !important
 }
+
 .clj-func {
     color: #a6e22e !important
 }
+
 .clj-str {
     color: #fd971f !important
 }
 
 .list-bg {
     padding: 0.5em !important;
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 0.1em;
 }
 
 .list-bg-blue {
     padding: 0.5em !important;
-    background-color:rgba(40, 79, 183, 0.6);
+    background-color: rgba(40, 79, 183, 0.6);
     border-radius: 0.1em;
 }
 
 .list-bg-orange {
     padding: 0.5em !important;
-    background-color:rgba(183, 157, 40, 0.7);
+    background-color: rgba(183, 157, 40, 0.7);
     border-radius: 0.1em;
 }
 
 .list-dark-bg {
     padding: 0.5em !important;
-    background-color:rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 0.5em;
 }
 
-.shadow-image .slide-background-content {
-    opacity: 0.5;
+.inline-no-bullet {
+    margin-left: 0 !important;
+}
+
+.inline-no-bullet li {
+    display: inline;
 }
 
 .grayscale .slide-background-content {
     filter: grayscale(100%);
+}
+
+.fade-to-gray .slide-background-content {
+    filter: grayscale(100%);
+    transition: all 5s ease;
+}
+
+.reload-clj {
+    position: absolute;
+    top: 1em;
+    right: -1em;
+    color: #E34229;
+}
+
+.reload-clj:hover {
+    color: #b31200;
+    cursor: pointer;
+}
+
+.photo-credits {
+    position: fixed;
+    bottom: 1em;
+    left: 40%;
+    font-size: 0.4em !important;
+    color: #ccc;
+}
+
+.indicator-bar{
+    position: fixed; top: 1em; left: 11.7em;
+}
+
+.indicator {
+    width: 1.5em;
+    height: 1.5em;
+    background-color: #666;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+.indicator-active:nth-child(1){
+    background-color: #FAAD00;
+}
+
+.indicator-active:nth-child(2){
+    background-color: #E34229;
+}
+.indicator-active:nth-child(3){
+    background-color: #6694CF;
+}
+
+.reveal pre code {
+    display: contents;
+}
+
+.red-bg{
+    background-color: #E34229; border-radius: 20px; width: 0.5em; height: 0.5em;
+}
+.green-bg{
+    background-color: #5EC299; border-radius: 20px; width: 0.5em; height: 0.5em;
+}
+
+.strike-center {
+    position: relative;
+    white-space: nowrap; /* would center line-through in the middle of the wrapped lines */
+}
+
+.strike-center:after {
+    border-top: 5px solid #E34229;
+    position: absolute;
+    content: "";
+    right: -0.2em;
+    top: 40%;
+    left: -0.2em;
+}
+
+.photo-credits a,
+span a {
+    color: #ccc!important;
+    text-decoration: underline;
+}
+
+.photo-credits a:hover,
+span a:hover {
+    color: #faa543!important;
 }
